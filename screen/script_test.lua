@@ -635,22 +635,22 @@ function test_decl.testDecodeScreen(t)
                 "\x01\x00\x00\x00\x00\x00\x00\x00", -- rows
                 "\x01\x00\x00\x00\x00\x00\x00\x00", -- cols
                 "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00", -- attrs
-                "\x02\x00\x00\x00", -- fg
-                "\x04\x00\x00\x00", -- bg
+                "\x00\x00\x00", -- fg
+                "\x00\x00\x00", -- bg
                 "\x00", -- width
                 "\x00\x00\x00\x00\x00\x00\x00\x00", -- chars
             }),
             in_dec_pos = 1,
             want_dec_err = false,
-            want_dec_pos = 65,
+            want_dec_pos = 63,
             want_ret = {
                 rows = 1,
                 cols = 1,
                 cell = {
                     {
                         {
-                            fg = {},
-                            bg = {},
+                            fg = {0x00, 0x00, 0x00},
+                            bg = {0x00, 0x00, 0x00},
                             chars = "",
                         },
                     },
@@ -675,22 +675,22 @@ function test_decl.testDecodeScreen(t)
                 "\x01\x00\x00\x00\x00\x00\x00\x00", -- rows
                 "\x01\x00\x00\x00\x00\x00\x00\x00", -- cols
                 "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00", -- attrs
-                "\x00\x01\x02\x03", -- fg   -- !
-                "\x04\x00\x00\x00", -- bg
+                "\x01\x02\x03", -- fg   -- !
+                "\x00\x00\x00", -- bg
                 "\x00", -- width
                 "\x00\x00\x00\x00\x00\x00\x00\x00", -- chars
             }),
             in_dec_pos = 1,
             want_dec_err = false,
-            want_dec_pos = 65,
+            want_dec_pos = 63,
             want_ret = {
                 rows = 1,
                 cols = 1,
                 cell = {
                     {
                         {
-                            fg = {rgb = {0x01, 0x02, 0x03}},
-                            bg = {},
+                            fg = {0x01, 0x02, 0x03},
+                            bg = {0x00, 0x00, 0x00},
                             chars = "",
                         },
                     },
@@ -715,22 +715,22 @@ function test_decl.testDecodeScreen(t)
                 "\x01\x00\x00\x00\x00\x00\x00\x00", -- rows
                 "\x01\x00\x00\x00\x00\x00\x00\x00", -- cols
                 "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00", -- attrs
-                "\x02\x00\x00\x00", -- fg
-                "\x00\x01\x02\x03", -- bg   -- !
+                "\x00\x00\x00", -- fg
+                "\x01\x02\x03", -- bg   -- !
                 "\x00", -- width
                 "\x00\x00\x00\x00\x00\x00\x00\x00", -- chars
             }),
             in_dec_pos = 1,
             want_dec_err = false,
-            want_dec_pos = 65,
+            want_dec_pos = 63,
             want_ret = {
                 rows = 1,
                 cols = 1,
                 cell = {
                     {
                         {
-                            fg = {},
-                            bg = {rgb = {0x01, 0x02, 0x03}},
+                            fg = {0x00, 0x00, 0x00},
+                            bg = {0x01, 0x02, 0x03},
                             chars = "",
                         },
                     },
@@ -755,22 +755,22 @@ function test_decl.testDecodeScreen(t)
                 "\x01\x00\x00\x00\x00\x00\x00\x00", -- rows
                 "\x01\x00\x00\x00\x00\x00\x00\x00", -- cols
                 "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00", -- attrs
-                "\x02\x00\x00\x00", -- fg
-                "\x04\x00\x00\x00", -- bg
+                "\x00\x00\x00", -- fg
+                "\x00\x00\x00", -- bg
                 "\x00", -- width
                 "\x03\x00\x00\x00\x00\x00\x00\x00abc",  -- chars    -- !
             }),
             in_dec_pos = 1,
             want_dec_err = false,
-            want_dec_pos = 68,
+            want_dec_pos = 66,
             want_ret = {
                 rows = 1,
                 cols = 1,
                 cell = {
                     {
                         {
-                            fg = {},
-                            bg = {},
+                            fg = {0x00, 0x00, 0x00},
+                            bg = {0x00, 0x00, 0x00},
                             chars = "abc",
                         },
                     },
@@ -797,35 +797,35 @@ function test_decl.testDecodeScreen(t)
                 "\x01\x00\x00\x00\x00\x00\x00\x00", -- cols
 
                 "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00", -- attrs
-                "\x02\x00\x00\x00", -- fg
-                "\x04\x00\x00\x00", -- bg
+                "\x00\x00\x00", -- fg
+                "\x00\x00\x00", -- bg
                 "\x00", -- width
                 "\x01\x00\x00\x00\x00\x00\x00\x00A",    -- chars
 
                 "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00", -- attrs
-                "\x02\x00\x00\x00", -- fg
-                "\x04\x00\x00\x00", -- bg
+                "\x00\x00\x00", -- fg
+                "\x00\x00\x00", -- bg
                 "\x00", -- width
                 "\x01\x00\x00\x00\x00\x00\x00\x00B",    -- chars
             }),
             in_dec_pos = 1,
             want_dec_err = false,
-            want_dec_pos = 96,
+            want_dec_pos = 92,
             want_ret = {
                 rows = 2,
                 cols = 1,
                 cell = {
                     {
                         {
-                            fg = {},
-                            bg = {},
+                            fg = {0x00, 0x00, 0x00},
+                            bg = {0x00, 0x00, 0x00},
                             chars = "A",
                         },
                     },
                     {
                         {
-                            fg = {},
-                            bg = {},
+                            fg = {0x00, 0x00, 0x00},
+                            bg = {0x00, 0x00, 0x00},
                             chars = "B",
                         },
                     },
@@ -851,33 +851,33 @@ function test_decl.testDecodeScreen(t)
                 "\x02\x00\x00\x00\x00\x00\x00\x00", -- cols -- !
 
                 "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00", -- attrs
-                "\x02\x00\x00\x00", -- fg
-                "\x04\x00\x00\x00", -- bg
+                "\x00\x00\x00", -- fg
+                "\x00\x00\x00", -- bg
                 "\x00", -- width
                 "\x01\x00\x00\x00\x00\x00\x00\x00A",    -- chars
 
                 "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00", -- attrs
-                "\x02\x00\x00\x00", -- fg
-                "\x04\x00\x00\x00", -- bg
+                "\x00\x00\x00", -- fg
+                "\x00\x00\x00", -- bg
                 "\x00", -- width
                 "\x01\x00\x00\x00\x00\x00\x00\x00B",    -- chars
             }),
             in_dec_pos = 1,
             want_dec_err = false,
-            want_dec_pos = 96,
+            want_dec_pos = 92,
             want_ret = {
                 rows = 1,
                 cols = 2,
                 cell = {
                     {
                         {
-                            fg = {},
-                            bg = {},
+                            fg = {0x00, 0x00, 0x00},
+                            bg = {0x00, 0x00, 0x00},
                             chars = "A",
                         },
                         {
-                            fg = {},
-                            bg = {},
+                            fg = {0x00, 0x00, 0x00},
+                            bg = {0x00, 0x00, 0x00},
                             chars = "B",
                         },
                     },
@@ -912,37 +912,37 @@ function test_decl.testDecodeCell(t)
     local tt = {
         {
             in_dec_err = false,
-            in_dec_bin = "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x02\x03\x00\x04\x05\x06\x00\x03\x00\x00\x00\x00\x00\x00\x00abc",
+            in_dec_bin = "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x02\x03\x04\x05\x06\x00\x03\x00\x00\x00\x00\x00\x00\x00abc",
             in_dec_pos = 1,
             want_dec_err = false,
-            want_dec_pos = 33,
+            want_dec_pos = 31,
             want_ret = {
-                fg = {rgb = {0x01, 0x02, 0x03}},
-                bg = {rgb = {0x04, 0x05, 0x06}},
+                fg = {0x01, 0x02, 0x03},
+                bg = {0x04, 0x05, 0x06},
                 chars = "abc",
             },
         },
         {
             in_dec_err = false,
-            in_dec_bin = "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x02\x03\x00\x04\x05\x06\x00\x03\x00\x00\x00\x00\x00\x00\x00abc", -- !
+            in_dec_bin = "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x02\x03\x04\x05\x06\x00\x03\x00\x00\x00\x00\x00\x00\x00abc", -- !
             in_dec_pos = 2, -- !
             want_dec_err = false,
-            want_dec_pos = 34,
+            want_dec_pos = 32,
             want_ret = {
-                fg = {rgb = {0x01, 0x02, 0x03}},
-                bg = {rgb = {0x04, 0x05, 0x06}},
+                fg = {0x01, 0x02, 0x03},
+                bg = {0x04, 0x05, 0x06},
                 chars = "abc",
             },
         },
         {
             in_dec_err = true,  -- !
-            in_dec_bin = "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x02\x03\x00\x04\x05\x06\x00\x03\x00\x00\x00\x00\x00\x00\x00abc",
+            in_dec_bin = "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x02\x03\x04\x05\x06\x00\x03\x00\x00\x00\x00\x00\x00\x00abc",
             in_dec_pos = 1,
             want_dec_err = true,
             want_dec_pos = 1,
             want_ret = {
-                fg = {},
-                bg = {},
+                fg = {0x00, 0x00, 0x00},
+                bg = {0x00, 0x00, 0x00},
                 chars = "",
             },
         },
@@ -953,56 +953,56 @@ function test_decl.testDecodeCell(t)
             want_dec_err = true,
             want_dec_pos = 1,
             want_ret = {
-                fg = {},
-                bg = {},
+                fg = {0x00, 0x00, 0x00},
+                bg = {0x00, 0x00, 0x00},
                 chars = "",
             },
         },
         {
             in_dec_err = false,
-            in_dec_bin = "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x02",    -- !
+            in_dec_bin = "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x02",    -- !
             in_dec_pos = 1,
             want_dec_err = true,
             want_dec_pos = 13,
             want_ret = {
-                fg = {},
-                bg = {},
+                fg = {0x00, 0x00, 0x00},
+                bg = {0x00, 0x00, 0x00},
                 chars = "",
             },
         },
         {
             in_dec_err = false,
-            in_dec_bin = "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x02\x03\x00\x04\x05",    -- !
+            in_dec_bin = "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x02\x03\x04\x05",    -- !
             in_dec_pos = 1,
             want_dec_err = true,
-            want_dec_pos = 17,
+            want_dec_pos = 16,
             want_ret = {
-                fg = {rgb = {0x01, 0x02, 0x03}},
-                bg = {},
+                fg = {0x01, 0x02, 0x03},
+                bg = {0x00, 0x00, 0x00},
                 chars = "",
             },
         },
         {
             in_dec_err = false,
-            in_dec_bin = "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x02\x03\x00\x04\x05\x06",    -- !
+            in_dec_bin = "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x02\x03\x04\x05\x06",    -- !
             in_dec_pos = 1,
             want_dec_err = true,
-            want_dec_pos = 21,
+            want_dec_pos = 19,
             want_ret = {
-                fg = {rgb = {0x01, 0x02, 0x03}},
-                bg = {rgb = {0x04, 0x05, 0x06}},
+                fg = {0x01, 0x02, 0x03},
+                bg = {0x04, 0x05, 0x06},
                 chars = "",
             },
         },
         {
             in_dec_err = false,
-            in_dec_bin = "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x02\x03\x00\x04\x05\x06\x00\x03\x00\x00\x00\x00\x00\x00\x00ab",  -- !
+            in_dec_bin = "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x02\x03\x04\x05\x06\x00\x03\x00\x00\x00\x00\x00\x00\x00ab",  -- !
             in_dec_pos = 1,
             want_dec_err = true,
-            want_dec_pos = 30,
+            want_dec_pos = 28,
             want_ret = {
-                fg = {rgb = {0x01, 0x02, 0x03}},
-                bg = {rgb = {0x04, 0x05, 0x06}},
+                fg = {0x01, 0x02, 0x03},
+                bg = {0x04, 0x05, 0x06},
                 chars = "",
             },
         },
@@ -1161,89 +1161,6 @@ function test_decl.testDecodeCursor(t)
         t.env.g_dec_bin = tc.in_dec_bin
         t.env.g_dec_pos = tc.in_dec_pos
         local got_ret = t.env.decodeCursor()
-
-        assertEqual("g_dec_err", tc.want_dec_err, t.env.g_dec_err)
-        assertEqual("g_dec_pos", tc.want_dec_pos, t.env.g_dec_pos)
-        assertEqual("ret", tc.want_ret, got_ret)
-    end
-end
-
-function test_decl.testDecodeColor(t)
-    local tt = {
-        {
-            in_dec_err = false,
-            in_dec_bin = "\x01\x02\x03\x04",
-            in_dec_pos = 1,
-            want_dec_err = false,
-            want_dec_pos = 5,
-            want_ret = {idx = 2},
-        },
-        {
-            in_dec_err = false,
-            in_dec_bin = "\x00\x02\x03\x04",    -- !
-            in_dec_pos = 1,
-            want_dec_err = false,
-            want_dec_pos = 5,
-            want_ret = {rgb = {0x02, 0x03, 0x04}},
-        },
-        {
-            in_dec_err = false,
-            in_dec_bin = "\x03\x02\x03\x04",    -- !
-            in_dec_pos = 1,
-            want_dec_err = false,
-            want_dec_pos = 5,
-            want_ret = {},
-        },
-        {
-            in_dec_err = false,
-            in_dec_bin = "\x05\x02\x03\x04",    -- !
-            in_dec_pos = 1,
-            want_dec_err = false,
-            want_dec_pos = 5,
-            want_ret = {},
-        },
-        {
-            in_dec_err = false,
-            in_dec_bin = "\x02\x02\x03\x04",    -- !
-            in_dec_pos = 1,
-            want_dec_err = false,
-            want_dec_pos = 5,
-            want_ret = {},
-        },
-        {
-            in_dec_err = false,
-            in_dec_bin = "\x04\x02\x03\x04",    -- !
-            in_dec_pos = 1,
-            want_dec_err = false,
-            want_dec_pos = 5,
-            want_ret = {},
-        },
-        {
-            in_dec_err = true,    -- !
-            in_dec_bin = "\x01\x02\x03\x04",
-            in_dec_pos = 1,
-            want_dec_err = true,
-            want_dec_pos = 1,
-            want_ret = {},
-        },
-        {
-            in_dec_err = false,
-            in_dec_bin = "\x01\x02\x03",    -- !
-            in_dec_pos = 1,
-            want_dec_err = true,
-            want_dec_pos = 1,
-            want_ret = {},
-        },
-    }
-
-    for _, tc in ipairs(tt) do
-        t:reset()
-        t.fn()
-
-        t.env.g_dec_err = tc.in_dec_err
-        t.env.g_dec_bin = tc.in_dec_bin
-        t.env.g_dec_pos = tc.in_dec_pos
-        local got_ret = t.env.decodeColor()
 
         assertEqual("g_dec_err", tc.want_dec_err, t.env.g_dec_err)
         assertEqual("g_dec_pos", tc.want_dec_pos, t.env.g_dec_pos)
@@ -1849,8 +1766,8 @@ function test_decl.testDrawScreen(t)
                 cell = {
                     {
                         {
-                            fg = {},
-                            bg = {},
+                            fg = {0xC4, 0xC4, 0xC4},
+                            bg = {0x00, 0x00, 0x00},
                             chars = "A",
                         },
                     },
@@ -1886,82 +1803,8 @@ function test_decl.testDrawScreen(t)
                 cell = {
                     {
                         {
-                            fg = {idx = 1}, -- !
-                            bg = {},
-                            chars = "A",
-                        },
-                    },
-                },
-                cursor = {
-                    visible = false,
-                    blink = false,
-                    shape = t.env.c_cursor_shape_block,
-                    row = 1,
-                    col = 1,
-                },
-            },
-            in_draw_cursor_blink = {
-                want = 60,
-                on = 30,
-                off = 30,
-                time = 120
-            },
-            want_screen_log = {
-                {fn = "setColor", args = {0x00, 0x00, 0x00}},
-                {fn = "drawClear", args = {}},
-                {fn = "setColor", args = {0x00, 0x00, 0x00}},
-                {fn = "drawRectF", args = {0, 0, 5, 6}},
-                {fn = "setColor", args = {0xC4, 0x40, 0x40}},
-                {fn = "drawText", args = {0, 0, "A"}},
-            },
-        },
-        {
-            in_property_number_tbl = {},
-            in_draw_screen = {
-                rows = 1,
-                cols = 1,
-                cell = {
-                    {
-                        {
-                            fg = {},
-                            bg = {idx = 1}, -- !
-                            chars = "A",
-                        },
-                    },
-                },
-                cursor = {
-                    visible = false,
-                    blink = false,
-                    shape = t.env.c_cursor_shape_block,
-                    row = 1,
-                    col = 1,
-                },
-            },
-            in_draw_cursor_blink = {
-                want = 60,
-                on = 30,
-                off = 30,
-                time = 120
-            },
-            want_screen_log = {
-                {fn = "setColor", args = {0x00, 0x00, 0x00}},
-                {fn = "drawClear", args = {}},
-                {fn = "setColor", args = {0xC4, 0x40, 0x40}},
-                {fn = "drawRectF", args = {0, 0, 5, 6}},
-                {fn = "setColor", args = {0xC4, 0xC4, 0xC4}},
-                {fn = "drawText", args = {0, 0, "A"}},
-            },
-        },
-        {
-            in_property_number_tbl = {},
-            in_draw_screen = {
-                rows = 1,
-                cols = 1,
-                cell = {
-                    {
-                        {
-                            fg = {},
-                            bg = {},
+                            fg = {0xC4, 0xC4, 0xC4},
+                            bg = {0x00, 0x00, 0x00},
                             chars = "", -- !
                         },
                     },
@@ -1997,8 +1840,8 @@ function test_decl.testDrawScreen(t)
                 cell = {
                     {
                         {
-                            fg = {},
-                            bg = {},
+                            fg = {0xC4, 0xC4, 0xC4},
+                            bg = {0x00, 0x00, 0x00},
                             chars = "\t",   -- !
                         },
                     },
@@ -2034,8 +1877,8 @@ function test_decl.testDrawScreen(t)
                 cell = {
                     {
                         {
-                            fg = {},
-                            bg = {},
+                            fg = {0xC4, 0xC4, 0xC4},
+                            bg = {0x00, 0x00, 0x00},
                             chars = "あ",   -- !
                         },
                     },
@@ -2071,8 +1914,8 @@ function test_decl.testDrawScreen(t)
                 cell = {
                     {
                         {
-                            fg = {},
-                            bg = {},
+                            fg = {0xC4, 0xC4, 0xC4},
+                            bg = {0x00, 0x00, 0x00},
                             chars = "AA",
                         },
                     },
@@ -2108,8 +1951,8 @@ function test_decl.testDrawScreen(t)
                 cell = {
                     {
                         {
-                            fg = {},
-                            bg = {},
+                            fg = {0xC4, 0xC4, 0xC4},
+                            bg = {0x00, 0x00, 0x00},
                             chars = "A",
                         },
                     },
@@ -2145,8 +1988,8 @@ function test_decl.testDrawScreen(t)
                 cell = {
                     {
                         {
-                            fg = {rgb = {0x01, 0x02, 0x03}},    -- !
-                            bg = {rgb = {0x04, 0x05, 0x06}},    -- !
+                            fg = {0x01, 0x02, 0x03},    -- !
+                            bg = {0x04, 0x05, 0x06},    -- !
                             chars = "A",
                         },
                     },
@@ -2182,8 +2025,8 @@ function test_decl.testDrawScreen(t)
                 cell = {
                     {
                         {
-                            fg = {},
-                            bg = {},
+                            fg = {0xC4, 0xC4, 0xC4},
+                            bg = {0x00, 0x00, 0x00},
                             chars = "A",
                         },
                     },
@@ -2219,8 +2062,8 @@ function test_decl.testDrawScreen(t)
                 cell = {
                     {
                         {
-                            fg = {},
-                            bg = {},
+                            fg = {0xC4, 0xC4, 0xC4},
+                            bg = {0x00, 0x00, 0x00},
                             chars = "A",
                         },
                     },
@@ -2256,8 +2099,8 @@ function test_decl.testDrawScreen(t)
                 cell = {
                     {
                         {
-                            fg = {},
-                            bg = {},
+                            fg = {0xC4, 0xC4, 0xC4},
+                            bg = {0x00, 0x00, 0x00},
                             chars = "A",
                         },
                     },
@@ -2295,8 +2138,8 @@ function test_decl.testDrawScreen(t)
                 cell = {
                     {
                         {
-                            fg = {},
-                            bg = {rgb = {0x01, 0x02, 0x03}},    -- !
+                            fg = {0xC4, 0xC4, 0xC4},
+                            bg = {0x01, 0x02, 0x03},    -- !
                             chars = "A",
                         },
                     },
@@ -2334,8 +2177,8 @@ function test_decl.testDrawScreen(t)
                 cell = {
                     {
                         {
-                            fg = {},
-                            bg = {},
+                            fg = {0xC4, 0xC4, 0xC4},
+                            bg = {0x00, 0x00, 0x00},
                             chars = "A",
                         },
                     },
@@ -2373,8 +2216,8 @@ function test_decl.testDrawScreen(t)
                 cell = {
                     {
                         {
-                            fg = {},
-                            bg = {rgb = {0x01, 0x02, 0x03}},    -- !
+                            fg = {0xC4, 0xC4, 0xC4},
+                            bg = {0x01, 0x02, 0x03},    -- !
                             chars = "A",
                         },
                     },
@@ -2415,8 +2258,8 @@ function test_decl.testDrawScreen(t)
                 cell = {
                     {
                         {
-                            fg = {},
-                            bg = {},
+                            fg = {0xC4, 0xC4, 0xC4},
+                            bg = {0x00, 0x00, 0x00},
                             chars = "A",
                         },
                     },
@@ -2455,8 +2298,8 @@ function test_decl.testDrawScreen(t)
                 cell = {
                     {
                         {
-                            fg = {},
-                            bg = {},
+                            fg = {0xC4, 0xC4, 0xC4},
+                            bg = {0x00, 0x00, 0x00},
                             chars = "A",
                         },
                     },
@@ -2497,8 +2340,8 @@ function test_decl.testDrawScreen(t)
                 cell = {
                     {
                         {
-                            fg = {},
-                            bg = {},
+                            fg = {0xC4, 0xC4, 0xC4},
+                            bg = {0x00, 0x00, 0x00},
                             chars = "A",
                         },
                     },
@@ -2537,15 +2380,15 @@ function test_decl.testDrawScreen(t)
                 cell = {
                     {
                         {
-                            fg = {},
-                            bg = {},
+                            fg = {0xC4, 0xC4, 0xC4},
+                            bg = {0x00, 0x00, 0x00},
                             chars = "A",
                         },
                     },
                     {
                         {
-                            fg = {},
-                            bg = {},
+                            fg = {0xC4, 0xC4, 0xC4},
+                            bg = {0x00, 0x00, 0x00},
                             chars = "B",
                         },
                     },
@@ -2585,15 +2428,15 @@ function test_decl.testDrawScreen(t)
                 cell = {
                     {
                         {
-                            fg = {},
-                            bg = {},
+                            fg = {0xC4, 0xC4, 0xC4},
+                            bg = {0x00, 0x00, 0x00},
                             chars = "A",
                         },
                     },
                     {
                         {
-                            fg = {},
-                            bg = {},
+                            fg = {0xC4, 0xC4, 0xC4},
+                            bg = {0x00, 0x00, 0x00},
                             chars = "B",
                         },
                     },
@@ -2633,15 +2476,15 @@ function test_decl.testDrawScreen(t)
                 cell = {
                     {
                         {
-                            fg = {},
-                            bg = {},
+                            fg = {0xC4, 0xC4, 0xC4},
+                            bg = {0x00, 0x00, 0x00},
                             chars = "A",
                         },
                     },
                     {
                         {
-                            fg = {},
-                            bg = {},
+                            fg = {0xC4, 0xC4, 0xC4},
+                            bg = {0x00, 0x00, 0x00},
                             chars = "B",
                         },
                     },
@@ -2683,15 +2526,15 @@ function test_decl.testDrawScreen(t)
                 cell = {
                     {
                         {
-                            fg = {},
-                            bg = {},
+                            fg = {0xC4, 0xC4, 0xC4},
+                            bg = {0x00, 0x00, 0x00},
                             chars = "A",
                         },
                     },
                     {
                         {
-                            fg = {},
-                            bg = {},
+                            fg = {0xC4, 0xC4, 0xC4},
+                            bg = {0x00, 0x00, 0x00},
                             chars = "B",
                         },
                     },
@@ -2733,15 +2576,15 @@ function test_decl.testDrawScreen(t)
                 cell = {
                     {
                         {
-                            fg = {},
-                            bg = {},
+                            fg = {0xC4, 0xC4, 0xC4},
+                            bg = {0x00, 0x00, 0x00},
                             chars = "A",
                         },
                     },
                     {
                         {
-                            fg = {},
-                            bg = {},
+                            fg = {0xC4, 0xC4, 0xC4},
+                            bg = {0x00, 0x00, 0x00},
                             chars = "B",
                         },
                     },
@@ -2781,15 +2624,15 @@ function test_decl.testDrawScreen(t)
                 cell = {
                     {
                         {
-                            fg = {},
-                            bg = {},
+                            fg = {0xC4, 0xC4, 0xC4},
+                            bg = {0x00, 0x00, 0x00},
                             chars = "A",
                         },
                     },
                     {
                         {
-                            fg = {},
-                            bg = {},
+                            fg = {0xC4, 0xC4, 0xC4},
+                            bg = {0x00, 0x00, 0x00},
                             chars = "B",
                         },
                     },
@@ -2831,15 +2674,15 @@ function test_decl.testDrawScreen(t)
                 cell = {
                     {
                         {
-                            fg = {},
-                            bg = {},
+                            fg = {0xC4, 0xC4, 0xC4},
+                            bg = {0x00, 0x00, 0x00},
                             chars = "A",
                         },
                     },
                     {
                         {
-                            fg = {},
-                            bg = {},
+                            fg = {0xC4, 0xC4, 0xC4},
+                            bg = {0x00, 0x00, 0x00},
                             chars = "B",
                         },
                     },
@@ -2884,15 +2727,15 @@ function test_decl.testDrawScreen(t)
                 cell = {
                     {
                         {
-                            fg = {},
-                            bg = {},
+                            fg = {0xC4, 0xC4, 0xC4},
+                            bg = {0x00, 0x00, 0x00},
                             chars = "A",
                         },
                     },
                     {
                         {
-                            fg = {},
-                            bg = {},
+                            fg = {0xC4, 0xC4, 0xC4},
+                            bg = {0x00, 0x00, 0x00},
                             chars = "B",
                         },
                     },
@@ -2933,13 +2776,13 @@ function test_decl.testDrawScreen(t)
                 cell = {
                     {
                         {
-                            fg = {},
-                            bg = {},
+                            fg = {0xC4, 0xC4, 0xC4},
+                            bg = {0x00, 0x00, 0x00},
                             chars = "A",
                         },
                         {
-                            fg = {},
-                            bg = {},
+                            fg = {0xC4, 0xC4, 0xC4},
+                            bg = {0x00, 0x00, 0x00},
                             chars = "B",
                         },
                     },
@@ -2979,13 +2822,13 @@ function test_decl.testDrawScreen(t)
                 cell = {
                     {
                         {
-                            fg = {},
-                            bg = {},
+                            fg = {0xC4, 0xC4, 0xC4},
+                            bg = {0x00, 0x00, 0x00},
                             chars = "A",
                         },
                         {
-                            fg = {},
-                            bg = {},
+                            fg = {0xC4, 0xC4, 0xC4},
+                            bg = {0x00, 0x00, 0x00},
                             chars = "B",
                         },
                     },
@@ -3025,13 +2868,13 @@ function test_decl.testDrawScreen(t)
                 cell = {
                     {
                         {
-                            fg = {},
-                            bg = {},
+                            fg = {0xC4, 0xC4, 0xC4},
+                            bg = {0x00, 0x00, 0x00},
                             chars = "A",
                         },
                         {
-                            fg = {},
-                            bg = {},
+                            fg = {0xC4, 0xC4, 0xC4},
+                            bg = {0x00, 0x00, 0x00},
                             chars = "B",
                         },
                     },
@@ -3073,13 +2916,13 @@ function test_decl.testDrawScreen(t)
                 cell = {
                     {
                         {
-                            fg = {},
-                            bg = {},
+                            fg = {0xC4, 0xC4, 0xC4},
+                            bg = {0x00, 0x00, 0x00},
                             chars = "A",
                         },
                         {
-                            fg = {},
-                            bg = {},
+                            fg = {0xC4, 0xC4, 0xC4},
+                            bg = {0x00, 0x00, 0x00},
                             chars = "B",
                         },
                     },
@@ -3121,13 +2964,13 @@ function test_decl.testDrawScreen(t)
                 cell = {
                     {
                         {
-                            fg = {},
-                            bg = {},
+                            fg = {0xC4, 0xC4, 0xC4},
+                            bg = {0x00, 0x00, 0x00},
                             chars = "A",
                         },
                         {
-                            fg = {},
-                            bg = {},
+                            fg = {0xC4, 0xC4, 0xC4},
+                            bg = {0x00, 0x00, 0x00},
                             chars = "B",
                         },
                     },
@@ -3167,13 +3010,13 @@ function test_decl.testDrawScreen(t)
                 cell = {
                     {
                         {
-                            fg = {},
-                            bg = {},
+                            fg = {0xC4, 0xC4, 0xC4},
+                            bg = {0x00, 0x00, 0x00},
                             chars = "A",
                         },
                         {
-                            fg = {},
-                            bg = {},
+                            fg = {0xC4, 0xC4, 0xC4},
+                            bg = {0x00, 0x00, 0x00},
                             chars = "B",
                         },
                     },
@@ -3215,13 +3058,13 @@ function test_decl.testDrawScreen(t)
                 cell = {
                     {
                         {
-                            fg = {},
-                            bg = {},
+                            fg = {0xC4, 0xC4, 0xC4},
+                            bg = {0x00, 0x00, 0x00},
                             chars = "A",
                         },
                         {
-                            fg = {},
-                            bg = {},
+                            fg = {0xC4, 0xC4, 0xC4},
+                            bg = {0x00, 0x00, 0x00},
                             chars = "B",
                         },
                     },
@@ -3266,13 +3109,13 @@ function test_decl.testDrawScreen(t)
                 cell = {
                     {
                         {
-                            fg = {},
-                            bg = {},
+                            fg = {0xC4, 0xC4, 0xC4},
+                            bg = {0x00, 0x00, 0x00},
                             chars = "A",
                         },
                         {
-                            fg = {},
-                            bg = {},
+                            fg = {0xC4, 0xC4, 0xC4},
+                            bg = {0x00, 0x00, 0x00},
                             chars = "B",
                         },
                     },
@@ -3315,54 +3158,6 @@ function test_decl.testDrawScreen(t)
         t.env.g_draw_cursor_blink = tc.in_draw_cursor_blink
         t.env.drawScreen()
         assertEqual("screen._log", tc.want_screen_log, t.env.screen._log)
-    end
-end
-
-function test_decl.testConvertRGB(t)
-    t:reset()
-    t.fn()
-
-    local tt = {
-        {
-            in_col = {},
-            want_rgb = nil,
-        },
-        {
-            in_col = {idx = -1},
-            want_rgb = nil,
-        },
-        {
-            in_col = {idx = 0},
-            want_rgb = t.env.c_color_palette[0],
-        },
-        {
-            in_col = {idx = 3},
-            want_rgb = t.env.c_color_palette[3],
-        },
-        {
-            in_col = {idx = 7},
-            want_rgb = t.env.c_color_palette[7],
-        },
-        {
-            in_col = {idx = 8},
-            want_rgb = nil,
-        },
-        {
-            in_col = {rgb = {0x01, 0x02, 0x03}},
-            want_rgb = {0x01, 0x02, 0x03},
-        },
-        {
-            in_col = {
-                idx = 0,
-                rgb = {0x01, 0x02, 0x03},
-            },
-            want_rgb = t.env.c_color_palette[0],
-        },
-    }
-
-    for _, tc in ipairs(tt) do
-        local got_rgb = t.env.convertRGB(tc.in_col, t.env.c_color_palette)
-        assertEqual("rgb", tc.want_rgb, got_rgb)
     end
 end
 

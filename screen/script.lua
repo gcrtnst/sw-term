@@ -1,16 +1,3 @@
-c_color_default_fg = {0xC4, 0xC4, 0xC4}
-c_color_default_bg = {0x00, 0x00, 0x00}
-c_color_palette = {
-    [0] = {0x00, 0x00, 0x00},
-    [1] = {0xC4, 0x40, 0x40},
-    [2] = {0x40, 0xC4, 0x40},
-    [3] = {0xC4, 0xC4, 0x40},
-    [4] = {0x40, 0x40, 0xC4},
-    [5] = {0xC4, 0x40, 0xC4},
-    [6] = {0x40, 0xC4, 0xC4},
-    [7] = {0xC4, 0xC4, 0xC4},
-}
-
 c_cell_width = 5
 c_cell_height = 6
 
@@ -173,8 +160,8 @@ end
 
 function decodeCell()
     decodeElem("!1<xxxxxxxxxxxx")   -- ignore attrs
-    local fg = decodeColor()
-    local bg = decodeColor()
+    local fg = decodeElem("!1<BBB")
+    local bg = decodeElem("!1<BBB")
     decodeElem("!1<x")  -- ignore width
     local chars = decodeString()
 
@@ -193,26 +180,6 @@ function decodeCursor()
         shape = list[3],
         row = list[4] + 1,
         col = list[5] + 1,
-    }
-end
-
-function decodeColor()
-    local list = decodeElem("!1<BBBB")
-    if g_dec_err then
-        return {}
-    end
-
-    local kind = list[1]
-    if kind & 0x06 ~= 0x00 then
-        return {}
-    end
-    if kind & 0x01 ~= 0x00 then
-        return {idx = list[2]}
-    end
-
-    table.remove(list, 1)
-    return {
-        rgb = list,
     }
 end
 
@@ -301,7 +268,7 @@ function drawScreen()
     end
     local cursor_visible = g_draw_screen.cursor.visible and (not g_draw_screen.cursor.blink or blinkCheck(g_draw_cursor_blink))
 
-    screen.setColor(table.unpack(c_color_default_bg))
+    screen.setColor(0x00, 0x00, 0x00)
     screen.drawClear()
     for row = 1, g_draw_screen.rows do
         for col = 1, g_draw_screen.cols do
@@ -310,9 +277,8 @@ function drawScreen()
             local y = (row - 1)*c_cell_height + p_offset_y
             local cursor_visible = cursor_visible and g_draw_screen.cursor.row == row and g_draw_screen.cursor.col == col
 
-            local fg = convertRGB(cell.fg, c_color_palette) or c_color_default_fg
-            local bg = convertRGB(cell.bg, c_color_palette) or c_color_default_bg
-
+            local fg = cell.fg
+            local bg = cell.bg
             if cursor_visible and g_draw_screen.cursor.shape == c_cursor_shape_block then
                 fg = invertRGB(fg)
                 bg = invertRGB(bg)
@@ -336,10 +302,6 @@ function drawScreen()
             end
         end
     end
-end
-
-function convertRGB(col, palette)
-    return col.idx ~= nil and palette[col.idx] or col.rgb
 end
 
 function invertRGB(rgb)
