@@ -18,9 +18,9 @@ c_cursor_shape_block = 1
 c_cursor_shape_underline = 2
 c_cursor_shape_barleft = 3
 
-p_http_port = nil
-p_offset_x = nil
-p_offset_y = nil
+p_http_port = property.getNumber("HTTP Port")
+p_offset_x = property.getNumber("Offset X")
+p_offset_y = property.getNumber("Offset Y")
 
 g_active = false
 g_http = false
@@ -34,10 +34,6 @@ g_draw_screen = nil
 g_draw_cursor_blink = nil
 
 function init()
-    p_http_port = property.getNumber("HTTP Port")
-    p_offset_x = property.getNumber("Offset X")
-    p_offset_y = property.getNumber("Offset Y")
-
     g_draw_cursor_blink = blinkNew(60, 30, 30)
 end
 
