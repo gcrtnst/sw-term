@@ -320,10 +320,10 @@ function drawScreen()
 
             screen.setColor(table.unpack(bg))
             screen.drawRectF(x, y, c_cell_width, c_cell_height)
-            if string.match(cell.chars, "^[ -~]$") then
-                screen.setColor(table.unpack(fg))
-                screen.drawText(x, y, cell.chars)
-            end
+
+            local chars = convertChars(cell.chars)
+            screen.setColor(table.unpack(fg))
+            screen.drawText(x, y, chars)
 
             if cursor_visible then
                 if g_draw_screen.cursor.shape == c_cursor_shape_underline then
@@ -348,6 +348,13 @@ function invertRGB(rgb)
         rgb[2] ~ 0xFF,
         rgb[3] ~ 0xFF,
     }
+end
+
+function convertChars(s)
+    if string.match(s, "^[ -~]$") ~= nil or s == "" then
+        return s
+    end
+    return "?"
 end
 
 function blinkNew(wait, on, off)

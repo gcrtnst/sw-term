@@ -1985,6 +1985,8 @@ function test_decl.testDrawScreen(t)
                 {fn = "drawClear", args = {}},
                 {fn = "setColor", args = {0x00, 0x00, 0x00}},
                 {fn = "drawRectF", args = {0, 0, 5, 6}},
+                {fn = "setColor", args = {0xC4, 0xC4, 0xC4}},
+                {fn = "drawText", args = {0, 0, ""}},
             },
         },
         {
@@ -2020,6 +2022,45 @@ function test_decl.testDrawScreen(t)
                 {fn = "drawClear", args = {}},
                 {fn = "setColor", args = {0x00, 0x00, 0x00}},
                 {fn = "drawRectF", args = {0, 0, 5, 6}},
+                {fn = "setColor", args = {0xC4, 0xC4, 0xC4}},
+                {fn = "drawText", args = {0, 0, "?"}},
+            },
+        },
+        {
+            in_property_number_tbl = {},
+            in_draw_screen = {
+                rows = 1,
+                cols = 1,
+                cell = {
+                    {
+                        {
+                            fg = {},
+                            bg = {},
+                            chars = "あ",   -- !
+                        },
+                    },
+                },
+                cursor = {
+                    visible = false,
+                    blink = false,
+                    shape = t.env.c_cursor_shape_block,
+                    row = 1,
+                    col = 1,
+                },
+            },
+            in_draw_cursor_blink = {
+                want = 60,
+                on = 30,
+                off = 30,
+                time = 120
+            },
+            want_screen_log = {
+                {fn = "setColor", args = {0x00, 0x00, 0x00}},
+                {fn = "drawClear", args = {}},
+                {fn = "setColor", args = {0x00, 0x00, 0x00}},
+                {fn = "drawRectF", args = {0, 0, 5, 6}},
+                {fn = "setColor", args = {0xC4, 0xC4, 0xC4}},
+                {fn = "drawText", args = {0, 0, "?"}},
             },
         },
         {
@@ -2055,6 +2096,8 @@ function test_decl.testDrawScreen(t)
                 {fn = "drawClear", args = {}},
                 {fn = "setColor", args = {0x00, 0x00, 0x00}},
                 {fn = "drawRectF", args = {0, 0, 5, 6}},
+                {fn = "setColor", args = {0xC4, 0xC4, 0xC4}},
+                {fn = "drawText", args = {0, 0, "?"}},
             },
         },
         {
@@ -3331,6 +3374,26 @@ function test_decl.testInvertRGB(t)
     local want_col = {0xFF, 0xA5, 0x00}
     local got_col = t.env.invertRGB(in_col)
     assertEqual("col", want_col, got_col)
+end
+
+function test_decl.testConvertChars(t)
+    local tt = {
+        {in_s = "", want_s = ""},
+        {in_s = "\x1F", want_s = "?"},
+        {in_s = " ", want_s = " "},
+        {in_s = "A", want_s = "A"},
+        {in_s = "~", want_s = "~"},
+        {in_s = "\x7F", want_s = "?"},
+        {in_s = "あ", want_s = "?"},
+    }
+
+    for _, tc in ipairs(tt) do
+        t:reset()
+        t.fn()
+
+        local got_s = t.env.convertChars(tc.in_s)
+        assertEqual("s", tc.want_s, got_s)
+    end
 end
 
 function test_decl.testBlink(t)
