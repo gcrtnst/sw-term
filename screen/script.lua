@@ -324,7 +324,7 @@ function adjustRGB(rgb)
             n = 0
         elseif 0 < n and n <= 245 then
             n = 0.0619528564/(((n^(-1.71241776))-0.0000763449893)^0.672207647)
-            n = math.tointeger((n + 0.5)//1)
+            n = convertInteger(n)
         elseif n > 245 then
             n = 255
         end
@@ -338,6 +338,12 @@ function convertChars(s)
         return s
     end
     return "?"
+end
+
+function convertInteger(n)
+    -- "(n + 0.5)//1" sometimes yields the value before rounding. I don't know why.
+    n = n + 0.5
+    return math.tointeger(n//1)
 end
 
 function blinkNew(wait, on, off)
