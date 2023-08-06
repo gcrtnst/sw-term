@@ -284,24 +284,28 @@ function drawScreen()
                 bg = invertRGB(bg)
             end
 
-            screen.setColor(table.unpack(bg))
+            drawColor(bg)
             screen.drawRectF(x, y, c_cell_width, c_cell_height)
 
             local chars = convertChars(cell.chars)
-            screen.setColor(table.unpack(fg))
+            drawColor(fg)
             screen.drawText(x, y, chars)
 
             if cursor_visible then
                 if g_draw_screen.cursor.shape == c_cursor_shape_underline then
-                    screen.setColor(table.unpack(invertRGB(bg)))
+                    drawColor(invertRGB(bg))
                     screen.drawText(x, y, "_")
                 elseif g_draw_screen.cursor.shape == c_cursor_shape_barleft then
-                    screen.setColor(table.unpack(invertRGB(bg)))
+                    drawColor(invertRGB(bg))
                     screen.drawLine(x, y, x, y+c_cell_height)
                 end
             end
         end
     end
+end
+
+function drawColor(rgb)
+    screen.setColor(table.unpack(adjustRGB(rgb)))
 end
 
 function invertRGB(rgb)
@@ -310,6 +314,23 @@ function invertRGB(rgb)
         rgb[2] ~ 0xFF,
         rgb[3] ~ 0xFF,
     }
+end
+
+function adjustRGB(rgb)
+    local ret = {}
+    for i = 1, 3 do
+        local n = rgb[i]
+        if n <= 0 then
+            n = 0
+        elseif 0 < n and n <= 245 then
+            n = 0.0619528564/(((n^(-1.71241776))-0.0000763449893)^0.672207647)
+            n = math.tointeger((n + 0.5)//1)
+        elseif n > 245 then
+            n = 255
+        end
+        ret[i] = n
+    end
+    return ret
 end
 
 function convertChars(s)
