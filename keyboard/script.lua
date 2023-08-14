@@ -1,3 +1,4 @@
+c_keyboard_mod_shift = 0x01
 c_keyboard_back_rgb = {0x06, 0x06, 0x06}
 c_keyboard_ctrl_rgb = {0x15, 0x15, 0x15}
 c_keyboard_char_rgb = {0xFF, 0xFF, 0xFF}
@@ -11,9 +12,6 @@ g_keyboard_offset_y = 0
 g_keyboard_mod = 0x00
 g_keyboard_keydef_list = {}
 g_keyboard_moddef_list = {}
-g_keyboard_caps_box = {1, 13, 11, 6}
-g_keyboard_caps_label = "CL"
-g_keyboard_caps_active = false
 
 g_http_cnt = 0
 
@@ -141,7 +139,6 @@ end
 function keyboardTick()
     keyboardTickOffset()
     keyboardTickMod()
-    keyboardTickCaps()
     keyboardTickKey()
 end
 
@@ -155,7 +152,7 @@ end
 function keyboardTickKey()
     for _, keydef in ipairs(g_keyboard_keydef_list) do
         local box = boxOffset(keydef.box, g_keyboard_offset_x, g_keyboard_offset_y)
-        local shift = keyboardShift(keydef)
+        local shift = g_keyboard_mod&c_keyboard_mod_shift ~= 0x00
         local key = shift and keydef.shift_key or keydef.plain_key
         local url = string.format("/keyboard?key=%s&mod=%d", key, g_keyboard_mod)
 
@@ -180,25 +177,15 @@ function keyboardTickMod()
     end
 end
 
-function keyboardTickCaps()
-    local box = boxOffset(g_keyboard_caps_box, g_keyboard_offset_x, g_keyboard_offset_y)
-
-    local time = touchBox(box)
-    if time == 0 then
-        g_keyboard_caps_active = not g_keyboard_caps_active
-    end
-end
-
 function keyboardDraw()
     keyboardDrawKey()
     keyboardDrawMod()
-    keyboardDrawCaps()
 end
 
 function keyboardDrawKey()
     for _, keydef in ipairs(g_keyboard_keydef_list) do
         local box = boxOffset(keydef.box, g_keyboard_offset_x, g_keyboard_offset_y)
-        local shift = keyboardShift(keydef)
+        local shift = g_keyboard_mod&c_keyboard_mod_shift ~= 0x00
         local key = shift and keydef.shift_key or keydef.plain_key
         local label = shift and keydef.shift_label or keydef.plain_label
         local time = touchBox(box)
@@ -233,30 +220,6 @@ function keyboardDrawMod()
         drawColor(fg)
         drawTextBox(box, moddef.label, 0, 0)
     end
-end
-
-function keyboardDrawCaps()
-    local box = boxOffset(g_keyboard_caps_box, g_keyboard_offset_x, g_keyboard_offset_y)
-
-    local bg = c_keyboard_back_rgb
-    local fg = c_keyboard_ctrl_rgb
-    if g_keyboard_caps_active then
-        bg = c_keyboard_char_rgb
-        fg = c_keyboard_back_rgb
-    end
-
-    drawColor(bg)
-    drawRectF(box)
-    drawColor(fg)
-    drawTextBox(box, g_keyboard_caps_label, 0, 0)
-end
-
-function keyboardShift(keydef)
-    local shift = g_keyboard_mod&0x01 ~= 0x00
-    if g_keyboard_caps_active and string.match(keydef.plain_key, "^[a-z]$") ~= nil then
-        shift = not shift
-    end
-    return shift
 end
 
 function httpGetIdle(port, url)

@@ -72,7 +72,6 @@ function test_decl.testKeyboardTickKey(t)
             in_keyboard_offset_y = 0,
             in_keyboard_mod = 0x00,
             in_keyboard_keydef_list = {},
-            in_keyboard_caps_active = false,
             in_http_cnt = 0,
             in_touch_first_time = -1,
             in_touch_first_x = 0,
@@ -90,7 +89,6 @@ function test_decl.testKeyboardTickKey(t)
             in_keyboard_keydef_list = {
                 {box = {13, 13, 5, 6}, plain_key = "a", shift_key = "A"},
             },
-            in_keyboard_caps_active = false,
             in_http_cnt = 0,
             in_touch_first_time = -1,
             in_touch_first_x = 0,
@@ -107,7 +105,6 @@ function test_decl.testKeyboardTickKey(t)
             in_keyboard_keydef_list = {
                 {box = {13, 13, 5, 6}, plain_key = "a", shift_key = "A"},
             },
-            in_keyboard_caps_active = false,
             in_http_cnt = 0,
             in_touch_first_time = 0,    -- !
             in_touch_first_x = 15,  -- !
@@ -126,7 +123,6 @@ function test_decl.testKeyboardTickKey(t)
             in_keyboard_keydef_list = {
                 {box = {13, 13, 5, 6}, plain_key = "a", shift_key = "A"},
             },
-            in_keyboard_caps_active = false,
             in_http_cnt = 0,
             in_touch_first_time = 0,    -- !
             in_touch_first_x = 12,  -- !
@@ -143,7 +139,6 @@ function test_decl.testKeyboardTickKey(t)
             in_keyboard_keydef_list = {
                 {box = {13, 13, 5, 6}, plain_key = "a", shift_key = "A"},
             },
-            in_keyboard_caps_active = false,
             in_http_cnt = 0,
             in_touch_first_time = 0,    -- !
             in_touch_first_x = 13,  -- !
@@ -162,7 +157,6 @@ function test_decl.testKeyboardTickKey(t)
             in_keyboard_keydef_list = {
                 {box = {13, 13, 5, 6}, plain_key = "a", shift_key = "A"},
             },
-            in_keyboard_caps_active = false,
             in_http_cnt = 0,
             in_touch_first_time = 0,    -- !
             in_touch_first_x = 18,  -- !
@@ -181,7 +175,6 @@ function test_decl.testKeyboardTickKey(t)
             in_keyboard_keydef_list = {
                 {box = {13, 13, 5, 6}, plain_key = "a", shift_key = "A"},
             },
-            in_keyboard_caps_active = false,
             in_http_cnt = 0,
             in_touch_first_time = 0,    -- !
             in_touch_first_x = 19,  -- !
@@ -198,7 +191,6 @@ function test_decl.testKeyboardTickKey(t)
             in_keyboard_keydef_list = {
                 {box = {13, 13, 5, 6}, plain_key = "a", shift_key = "A"},
             },
-            in_keyboard_caps_active = false,
             in_http_cnt = 0,
             in_touch_first_time = 0,    -- !
             in_touch_first_x = 15,  -- !
@@ -215,7 +207,6 @@ function test_decl.testKeyboardTickKey(t)
             in_keyboard_keydef_list = {
                 {box = {13, 13, 5, 6}, plain_key = "a", shift_key = "A"},
             },
-            in_keyboard_caps_active = false,
             in_http_cnt = 0,
             in_touch_first_time = 0,    -- !
             in_touch_first_x = 15,  -- !
@@ -234,7 +225,6 @@ function test_decl.testKeyboardTickKey(t)
             in_keyboard_keydef_list = {
                 {box = {13, 13, 5, 6}, plain_key = "a", shift_key = "A"},
             },
-            in_keyboard_caps_active = false,
             in_http_cnt = 0,
             in_touch_first_time = 0,    -- !
             in_touch_first_x = 15,  -- !
@@ -253,7 +243,6 @@ function test_decl.testKeyboardTickKey(t)
             in_keyboard_keydef_list = {
                 {box = {13, 13, 5, 6}, plain_key = "a", shift_key = "A"},
             },
-            in_keyboard_caps_active = false,
             in_http_cnt = 0,
             in_touch_first_time = 0,    -- !
             in_touch_first_x = 15,  -- !
@@ -270,7 +259,6 @@ function test_decl.testKeyboardTickKey(t)
             in_keyboard_keydef_list = {
                 {box = {13, 13, 5, 6}, plain_key = "a", shift_key = "A"},
             },
-            in_keyboard_caps_active = false,
             in_http_cnt = 0,
             in_touch_first_time = 0,    -- !
             in_touch_first_x = 47,  -- !
@@ -289,7 +277,6 @@ function test_decl.testKeyboardTickKey(t)
             in_keyboard_keydef_list = {
                 {box = {13, 13, 5, 6}, plain_key = "a", shift_key = "A"},
             },
-            in_keyboard_caps_active = false,
             in_http_cnt = 0,
             in_touch_first_time = 0,    -- !
             in_touch_first_x = 44,  -- !
@@ -306,7 +293,6 @@ function test_decl.testKeyboardTickKey(t)
             in_keyboard_keydef_list = {
                 {box = {13, 13, 5, 6}, plain_key = "a", shift_key = "A"},
             },
-            in_keyboard_caps_active = false,
             in_http_cnt = 0,
             in_touch_first_time = 0,    -- !
             in_touch_first_x = 45,  -- !
@@ -325,7 +311,6 @@ function test_decl.testKeyboardTickKey(t)
             in_keyboard_keydef_list = {
                 {box = {13, 13, 5, 6}, plain_key = "a", shift_key = "A"},
             },
-            in_keyboard_caps_active = false,
             in_http_cnt = 0,
             in_touch_first_time = 0,    -- !
             in_touch_first_x = 50,  -- !
@@ -344,7 +329,6 @@ function test_decl.testKeyboardTickKey(t)
             in_keyboard_keydef_list = {
                 {box = {13, 13, 5, 6}, plain_key = "a", shift_key = "A"},
             },
-            in_keyboard_caps_active = false,
             in_http_cnt = 0,
             in_touch_first_time = 0,    -- !
             in_touch_first_x = 51,  -- !
@@ -361,7 +345,6 @@ function test_decl.testKeyboardTickKey(t)
             in_keyboard_keydef_list = {
                 {box = {13, 13, 5, 6}, plain_key = "a", shift_key = "A"},
             },
-            in_keyboard_caps_active = false,
             in_http_cnt = 0,
             in_touch_first_time = 0,    -- !
             in_touch_first_x = 47,  -- !
@@ -378,7 +361,6 @@ function test_decl.testKeyboardTickKey(t)
             in_keyboard_keydef_list = {
                 {box = {13, 13, 5, 6}, plain_key = "a", shift_key = "A"},
             },
-            in_keyboard_caps_active = false,
             in_http_cnt = 0,
             in_touch_first_time = 0,    -- !
             in_touch_first_x = 47,  -- !
@@ -397,7 +379,6 @@ function test_decl.testKeyboardTickKey(t)
             in_keyboard_keydef_list = {
                 {box = {13, 13, 5, 6}, plain_key = "a", shift_key = "A"},
             },
-            in_keyboard_caps_active = false,
             in_http_cnt = 0,
             in_touch_first_time = 0,    -- !
             in_touch_first_x = 47,  -- !
@@ -416,7 +397,6 @@ function test_decl.testKeyboardTickKey(t)
             in_keyboard_keydef_list = {
                 {box = {13, 13, 5, 6}, plain_key = "a", shift_key = "A"},
             },
-            in_keyboard_caps_active = false,
             in_http_cnt = 0,
             in_touch_first_time = 0,    -- !
             in_touch_first_x = 47,  -- !
@@ -433,7 +413,6 @@ function test_decl.testKeyboardTickKey(t)
             in_keyboard_keydef_list = {
                 {box = {13, 13, 5, 6}, plain_key = "a", shift_key = "A"},
             },
-            in_keyboard_caps_active = false,
             in_http_cnt = 0,
             in_touch_first_time = 0,    -- !
             in_touch_first_x = 15,  -- !
@@ -448,30 +427,10 @@ function test_decl.testKeyboardTickKey(t)
         {
             in_keyboard_offset_x = 0,
             in_keyboard_offset_y = 0,
-            in_keyboard_mod = 0x00,
-            in_keyboard_keydef_list = {
-                {box = {13, 13, 5, 6}, plain_key = "a", shift_key = "A"},
-            },
-            in_keyboard_caps_active = true, -- !
-            in_http_cnt = 0,
-            in_touch_first_time = 0,    -- !
-            in_touch_first_x = 15,  -- !
-            in_touch_first_y = 16,  -- !
-            in_touch_second_time = -1,
-            in_touch_second_x = 0,
-            in_touch_second_y = 0,
-            want_async_log = {
-                {52149, "/keyboard?key=A&mod=0"},
-            },
-        },
-        {
-            in_keyboard_offset_x = 0,
-            in_keyboard_offset_y = 0,
             in_keyboard_mod = 0x06, -- !
             in_keyboard_keydef_list = {
                 {box = {13, 13, 5, 6}, plain_key = "a", shift_key = "A"},
             },
-            in_keyboard_caps_active = false,
             in_http_cnt = 0,
             in_touch_first_time = 0,    -- !
             in_touch_first_x = 15,  -- !
@@ -490,7 +449,6 @@ function test_decl.testKeyboardTickKey(t)
             in_keyboard_keydef_list = {
                 {box = {13, 13, 5, 6}, plain_key = "a", shift_key = "A"},
             },
-            in_keyboard_caps_active = false,
             in_http_cnt = 1,    -- !
             in_touch_first_time = 0,    -- !
             in_touch_first_x = 15,  -- !
@@ -509,7 +467,6 @@ function test_decl.testKeyboardTickKey(t)
             in_keyboard_keydef_list = {
                 {box = {13, 13, 5, 6}, plain_key = "a", shift_key = "A"},
             },
-            in_keyboard_caps_active = false,
             in_http_cnt = 0,
             in_touch_first_time = 1,    -- !
             in_touch_first_x = 15,  -- !
@@ -526,7 +483,6 @@ function test_decl.testKeyboardTickKey(t)
             in_keyboard_keydef_list = {
                 {box = {13, 13, 5, 6}, plain_key = "a", shift_key = "A"},
             },
-            in_keyboard_caps_active = false,
             in_http_cnt = 0,
             in_touch_first_time = 29,   -- !
             in_touch_first_x = 15,  -- !
@@ -543,7 +499,6 @@ function test_decl.testKeyboardTickKey(t)
             in_keyboard_keydef_list = {
                 {box = {13, 13, 5, 6}, plain_key = "a", shift_key = "A"},
             },
-            in_keyboard_caps_active = false,
             in_http_cnt = 0,
             in_touch_first_time = 30,   -- !
             in_touch_first_x = 15,  -- !
@@ -562,7 +517,6 @@ function test_decl.testKeyboardTickKey(t)
             in_keyboard_keydef_list = {
                 {box = {13, 13, 5, 6}, plain_key = "a", shift_key = "A"},
             },
-            in_keyboard_caps_active = false,
             in_http_cnt = 1,    -- !
             in_touch_first_time = 30,   -- !
             in_touch_first_x = 15,  -- !
@@ -581,7 +535,6 @@ function test_decl.testKeyboardTickKey(t)
                 {box = {13, 13, 5, 6}, plain_key = "a", shift_key = "A"},
                 {box = {40, 19, 5, 6}, plain_key = "b", shift_key = "B"},
             },
-            in_keyboard_caps_active = false,
             in_http_cnt = 0,
             in_touch_first_time = -1,
             in_touch_first_x = 0,
@@ -599,7 +552,6 @@ function test_decl.testKeyboardTickKey(t)
                 {box = {13, 13, 5, 6}, plain_key = "a", shift_key = "A"},
                 {box = {40, 19, 5, 6}, plain_key = "b", shift_key = "B"},
             },
-            in_keyboard_caps_active = false,
             in_http_cnt = 0,
             in_touch_first_time = 0,    -- !
             in_touch_first_x = 15,  -- !
@@ -619,7 +571,6 @@ function test_decl.testKeyboardTickKey(t)
                 {box = {13, 13, 5, 6}, plain_key = "a", shift_key = "A"},
                 {box = {40, 19, 5, 6}, plain_key = "b", shift_key = "B"},
             },
-            in_keyboard_caps_active = false,
             in_http_cnt = 0,
             in_touch_first_time = 0,    -- !
             in_touch_first_x = 42,  -- !
@@ -639,7 +590,6 @@ function test_decl.testKeyboardTickKey(t)
                 {box = {13, 13, 5, 6}, plain_key = "a", shift_key = "A"},
                 {box = {40, 19, 5, 6}, plain_key = "b", shift_key = "B"},
             },
-            in_keyboard_caps_active = false,
             in_http_cnt = 0,
             in_touch_first_time = 0,    -- !
             in_touch_first_x = 15,  -- !
@@ -663,7 +613,6 @@ function test_decl.testKeyboardTickKey(t)
         t.env.g_keyboard_offset_y = tc.in_keyboard_offset_y
         t.env.g_keyboard_mod = tc.in_keyboard_mod
         t.env.g_keyboard_keydef_list = tc.in_keyboard_keydef_list
-        t.env.g_keyboard_caps_active = tc.in_keyboard_caps_active
         t.env.g_http_cnt = tc.in_http_cnt
         t.env.g_touch_first_time = tc.in_touch_first_time
         t.env.g_touch_first_x = tc.in_touch_first_x
@@ -1107,224 +1056,6 @@ function test_decl.testKeyboardTickMod(t)
     end
 end
 
-function test_decl.testKeyboardTickCaps(t)
-    local tt = {
-        {
-            in_keyboard_offset_x = 0,
-            in_keyboard_offset_y = 0,
-            in_keyboard_caps_active = false,
-            in_touch_first_time = -1,
-            in_touch_first_x = 0,
-            in_touch_first_y = 0,
-            want_keyboard_caps_active = false,
-        },
-        {
-            in_keyboard_offset_x = 0,
-            in_keyboard_offset_y = 0,
-            in_keyboard_caps_active = true, -- !
-            in_touch_first_time = -1,
-            in_touch_first_x = 0,
-            in_touch_first_y = 0,
-            want_keyboard_caps_active = true,
-        },
-        {
-            in_keyboard_offset_x = 0,
-            in_keyboard_offset_y = 0,
-            in_keyboard_caps_active = false,
-            in_touch_first_time = 0,    -- !
-            in_touch_first_x = 6,   -- !
-            in_touch_first_y = 16,  -- !
-            want_keyboard_caps_active = true,
-        },
-        {
-            in_keyboard_offset_x = 0,
-            in_keyboard_offset_y = 0,
-            in_keyboard_caps_active = true, -- !
-            in_touch_first_time = 0,    -- !
-            in_touch_first_x = 6,   -- !
-            in_touch_first_y = 16,  -- !
-            want_keyboard_caps_active = false,
-        },
-        {
-            in_keyboard_offset_x = 0,
-            in_keyboard_offset_y = 0,
-            in_keyboard_caps_active = false,
-            in_touch_first_time = 1,    -- !
-            in_touch_first_x = 6,   -- !
-            in_touch_first_y = 16,  -- !
-            want_keyboard_caps_active = false,
-        },
-        {
-            in_keyboard_offset_x = 0,
-            in_keyboard_offset_y = 0,
-            in_keyboard_caps_active = false,
-            in_touch_first_time = 0,    -- !
-            in_touch_first_x = 0,   -- !
-            in_touch_first_y = 16,  -- !
-            want_keyboard_caps_active = false,
-        },
-        {
-            in_keyboard_offset_x = 0,
-            in_keyboard_offset_y = 0,
-            in_keyboard_caps_active = false,
-            in_touch_first_time = 0,    -- !
-            in_touch_first_x = 1,   -- !
-            in_touch_first_y = 16,  -- !
-            want_keyboard_caps_active = true,
-        },
-        {
-            in_keyboard_offset_x = 0,
-            in_keyboard_offset_y = 0,
-            in_keyboard_caps_active = false,
-            in_touch_first_time = 0,    -- !
-            in_touch_first_x = 12,  -- !
-            in_touch_first_y = 16,  -- !
-            want_keyboard_caps_active = true,
-        },
-        {
-            in_keyboard_offset_x = 0,
-            in_keyboard_offset_y = 0,
-            in_keyboard_caps_active = false,
-            in_touch_first_time = 0,    -- !
-            in_touch_first_x = 13,  -- !
-            in_touch_first_y = 16,  -- !
-            want_keyboard_caps_active = false,
-        },
-        {
-            in_keyboard_offset_x = 0,
-            in_keyboard_offset_y = 0,
-            in_keyboard_caps_active = false,
-            in_touch_first_time = 0,    -- !
-            in_touch_first_x = 6,   -- !
-            in_touch_first_y = 12,  -- !
-            want_keyboard_caps_active = false,
-        },
-        {
-            in_keyboard_offset_x = 0,
-            in_keyboard_offset_y = 0,
-            in_keyboard_caps_active = false,
-            in_touch_first_time = 0,    -- !
-            in_touch_first_x = 6,   -- !
-            in_touch_first_y = 13,  -- !
-            want_keyboard_caps_active = true,
-        },
-        {
-            in_keyboard_offset_x = 0,
-            in_keyboard_offset_y = 0,
-            in_keyboard_caps_active = false,
-            in_touch_first_time = 0,    -- !
-            in_touch_first_x = 6,   -- !
-            in_touch_first_y = 19,  -- !
-            want_keyboard_caps_active = true,
-        },
-        {
-            in_keyboard_offset_x = 0,
-            in_keyboard_offset_y = 0,
-            in_keyboard_caps_active = false,
-            in_touch_first_time = 0,    -- !
-            in_touch_first_x = 6,   -- !
-            in_touch_first_y = 20,  -- !
-            want_keyboard_caps_active = false,
-        },
-        {
-            in_keyboard_offset_x = 32,  -- !
-            in_keyboard_offset_y = 64,  -- !
-            in_keyboard_caps_active = false,
-            in_touch_first_time = 0,    -- !
-            in_touch_first_x = 38,  -- !
-            in_touch_first_y = 80,  -- !
-            want_keyboard_caps_active = true,
-        },
-        {
-            in_keyboard_offset_x = 32,  -- !
-            in_keyboard_offset_y = 64,  -- !
-            in_keyboard_caps_active = false,
-            in_touch_first_time = 0,    -- !
-            in_touch_first_x = 32,  -- !
-            in_touch_first_y = 80,  -- !
-            want_keyboard_caps_active = false,
-        },
-        {
-            in_keyboard_offset_x = 32,  -- !
-            in_keyboard_offset_y = 64,  -- !
-            in_keyboard_caps_active = false,
-            in_touch_first_time = 0,    -- !
-            in_touch_first_x = 33,  -- !
-            in_touch_first_y = 80,  -- !
-            want_keyboard_caps_active = true,
-        },
-        {
-            in_keyboard_offset_x = 32,  -- !
-            in_keyboard_offset_y = 64,  -- !
-            in_keyboard_caps_active = false,
-            in_touch_first_time = 0,    -- !
-            in_touch_first_x = 44,  -- !
-            in_touch_first_y = 80,  -- !
-            want_keyboard_caps_active = true,
-        },
-        {
-            in_keyboard_offset_x = 32,  -- !
-            in_keyboard_offset_y = 64,  -- !
-            in_keyboard_caps_active = false,
-            in_touch_first_time = 0,    -- !
-            in_touch_first_x = 45,  -- !
-            in_touch_first_y = 80,  -- !
-            want_keyboard_caps_active = false,
-        },
-        {
-            in_keyboard_offset_x = 32,  -- !
-            in_keyboard_offset_y = 64,  -- !
-            in_keyboard_caps_active = false,
-            in_touch_first_time = 0,    -- !
-            in_touch_first_x = 38,  -- !
-            in_touch_first_y = 76,  -- !
-            want_keyboard_caps_active = false,
-        },
-        {
-            in_keyboard_offset_x = 32,  -- !
-            in_keyboard_offset_y = 64,  -- !
-            in_keyboard_caps_active = false,
-            in_touch_first_time = 0,    -- !
-            in_touch_first_x = 38,  -- !
-            in_touch_first_y = 77,  -- !
-            want_keyboard_caps_active = true,
-        },
-        {
-            in_keyboard_offset_x = 32,  -- !
-            in_keyboard_offset_y = 64,  -- !
-            in_keyboard_caps_active = false,
-            in_touch_first_time = 0,    -- !
-            in_touch_first_x = 38,  -- !
-            in_touch_first_y = 83,  -- !
-            want_keyboard_caps_active = true,
-        },
-        {
-            in_keyboard_offset_x = 32,  -- !
-            in_keyboard_offset_y = 64,  -- !
-            in_keyboard_caps_active = false,
-            in_touch_first_time = 0,    -- !
-            in_touch_first_x = 38,  -- !
-            in_touch_first_y = 84,  -- !
-            want_keyboard_caps_active = false,
-        },
-    }
-
-    for _, tc in ipairs(tt) do
-        t:reset()
-        t.fn()
-
-        t.env.g_keyboard_offset_x = tc.in_keyboard_offset_x
-        t.env.g_keyboard_offset_y = tc.in_keyboard_offset_y
-        t.env.g_keyboard_caps_active = tc.in_keyboard_caps_active
-        t.env.g_touch_first_time = tc.in_touch_first_time
-        t.env.g_touch_first_x = tc.in_touch_first_x
-        t.env.g_touch_first_y = tc.in_touch_first_y
-        t.env.keyboardTickCaps()
-
-        assertEqual("g_keyboard_caps_active", tc.want_keyboard_caps_active, t.env.g_keyboard_caps_active)
-    end
-end
-
 function test_decl.testKeyboardDrawKey(t)
     local tt = {
         {
@@ -1332,7 +1063,6 @@ function test_decl.testKeyboardDrawKey(t)
             in_keyboard_offset_y = 0,
             in_keyboard_mod = 0x00,
             in_keyboard_keydef_list = {},
-            in_keyboard_caps_active = false,
             in_touch_first_time = -1,
             in_touch_first_x = 0,
             in_touch_first_y = 0,
@@ -1349,7 +1079,6 @@ function test_decl.testKeyboardDrawKey(t)
             in_keyboard_keydef_list = {
                 {box = {13, 13, 5, 6}, plain_label = "a", shift_label = "A", plain_key = "a", shift_key = "A"},
             },
-            in_keyboard_caps_active = false,
             in_touch_first_time = -1,
             in_touch_first_x = 0,
             in_touch_first_y = 0,
@@ -1370,7 +1099,6 @@ function test_decl.testKeyboardDrawKey(t)
             in_keyboard_keydef_list = {
                 {box = {13, 13, 5, 6}, plain_label = "a", shift_label = "A", plain_key = "a", shift_key = "A"},
             },
-            in_keyboard_caps_active = false,
             in_touch_first_time = -1,
             in_touch_first_x = 0,
             in_touch_first_y = 0,
@@ -1391,7 +1119,6 @@ function test_decl.testKeyboardDrawKey(t)
             in_keyboard_keydef_list = {
                 {box = {13, 13, 5, 6}, plain_label = "a", shift_label = "A", plain_key = "a", shift_key = "A"},
             },
-            in_keyboard_caps_active = false,
             in_touch_first_time = -1,
             in_touch_first_x = 0,
             in_touch_first_y = 0,
@@ -1412,28 +1139,6 @@ function test_decl.testKeyboardDrawKey(t)
             in_keyboard_keydef_list = {
                 {box = {13, 13, 5, 6}, plain_label = "a", shift_label = "A", plain_key = "a", shift_key = "A"},
             },
-            in_keyboard_caps_active = true, -- !
-            in_touch_first_time = -1,
-            in_touch_first_x = 0,
-            in_touch_first_y = 0,
-            in_touch_second_time = -1,
-            in_touch_second_x = 0,
-            in_touch_second_y = 0,
-            want_screen_log = {
-                {fn = "setColor", args = {0x06, 0x06, 0x06}},
-                {fn = "drawRectF", args = {13, 13, 5, 6}},
-                {fn = "setColor", args = {0xFF, 0xFF, 0xFF}},
-                {fn = "drawTextBox", args = {13, 13, 5, 6, "A", 0, 0}},
-            },
-        },
-        {
-            in_keyboard_offset_x = 0,
-            in_keyboard_offset_y = 0,
-            in_keyboard_mod = 0x00,
-            in_keyboard_keydef_list = {
-                {box = {13, 13, 5, 6}, plain_label = "a", shift_label = "A", plain_key = "a", shift_key = "A"},
-            },
-            in_keyboard_caps_active = false,
             in_touch_first_time = 0,    -- !
             in_touch_first_x = 15,  -- !
             in_touch_first_y = 16,  -- !
@@ -1454,7 +1159,6 @@ function test_decl.testKeyboardDrawKey(t)
             in_keyboard_keydef_list = {
                 {box = {13, 13, 5, 6}, plain_label = "a", shift_label = "A", plain_key = "a", shift_key = "A"},
             },
-            in_keyboard_caps_active = false,
             in_touch_first_time = 1,    -- !
             in_touch_first_x = 15,  -- !
             in_touch_first_y = 16,  -- !
@@ -1475,7 +1179,6 @@ function test_decl.testKeyboardDrawKey(t)
             in_keyboard_keydef_list = {
                 {box = {13, 13, 5, 6}, plain_label = "a", shift_label = "A", plain_key = "a", shift_key = "A"},
             },
-            in_keyboard_caps_active = false,
             in_touch_first_time = 0,    -- !
             in_touch_first_x = 12,  -- !
             in_touch_first_y = 16,  -- !
@@ -1496,7 +1199,6 @@ function test_decl.testKeyboardDrawKey(t)
             in_keyboard_keydef_list = {
                 {box = {13, 13, 5, 6}, plain_label = "a", shift_label = "A", plain_key = "a", shift_key = "A"},
             },
-            in_keyboard_caps_active = false,
             in_touch_first_time = 0,    -- !
             in_touch_first_x = 13,  -- !
             in_touch_first_y = 16,  -- !
@@ -1517,7 +1219,6 @@ function test_decl.testKeyboardDrawKey(t)
             in_keyboard_keydef_list = {
                 {box = {13, 13, 5, 6}, plain_label = "a", shift_label = "A", plain_key = "a", shift_key = "A"},
             },
-            in_keyboard_caps_active = false,
             in_touch_first_time = 0,    -- !
             in_touch_first_x = 18,  -- !
             in_touch_first_y = 16,  -- !
@@ -1538,7 +1239,6 @@ function test_decl.testKeyboardDrawKey(t)
             in_keyboard_keydef_list = {
                 {box = {13, 13, 5, 6}, plain_label = "a", shift_label = "A", plain_key = "a", shift_key = "A"},
             },
-            in_keyboard_caps_active = false,
             in_touch_first_time = 0,    -- !
             in_touch_first_x = 19,  -- !
             in_touch_first_y = 16,  -- !
@@ -1559,7 +1259,6 @@ function test_decl.testKeyboardDrawKey(t)
             in_keyboard_keydef_list = {
                 {box = {13, 13, 5, 6}, plain_label = "a", shift_label = "A", plain_key = "a", shift_key = "A"},
             },
-            in_keyboard_caps_active = false,
             in_touch_first_time = 0,    -- !
             in_touch_first_x = 15,  -- !
             in_touch_first_y = 12,  -- !
@@ -1580,7 +1279,6 @@ function test_decl.testKeyboardDrawKey(t)
             in_keyboard_keydef_list = {
                 {box = {13, 13, 5, 6}, plain_label = "a", shift_label = "A", plain_key = "a", shift_key = "A"},
             },
-            in_keyboard_caps_active = false,
             in_touch_first_time = 0,    -- !
             in_touch_first_x = 15,  -- !
             in_touch_first_y = 13,  -- !
@@ -1601,7 +1299,6 @@ function test_decl.testKeyboardDrawKey(t)
             in_keyboard_keydef_list = {
                 {box = {13, 13, 5, 6}, plain_label = "a", shift_label = "A", plain_key = "a", shift_key = "A"},
             },
-            in_keyboard_caps_active = false,
             in_touch_first_time = 0,    -- !
             in_touch_first_x = 15,  -- !
             in_touch_first_y = 19,  -- !
@@ -1622,7 +1319,6 @@ function test_decl.testKeyboardDrawKey(t)
             in_keyboard_keydef_list = {
                 {box = {13, 13, 5, 6}, plain_label = "a", shift_label = "A", plain_key = "a", shift_key = "A"},
             },
-            in_keyboard_caps_active = false,
             in_touch_first_time = 0,    -- !
             in_touch_first_x = 15,  -- !
             in_touch_first_y = 20,  -- !
@@ -1643,7 +1339,6 @@ function test_decl.testKeyboardDrawKey(t)
             in_keyboard_keydef_list = {
                 {box = {13, 13, 5, 6}, plain_label = "a", shift_label = "A", plain_key = "a", shift_key = "A"},
             },
-            in_keyboard_caps_active = false,
             in_touch_first_time = 0,    -- !
             in_touch_first_x = 47,  -- !
             in_touch_first_y = 80,  -- !
@@ -1664,7 +1359,6 @@ function test_decl.testKeyboardDrawKey(t)
             in_keyboard_keydef_list = {
                 {box = {13, 13, 5, 6}, plain_label = "a", shift_label = "A", plain_key = "a", shift_key = "A"},
             },
-            in_keyboard_caps_active = false,
             in_touch_first_time = 0,    -- !
             in_touch_first_x = 44,  -- !
             in_touch_first_y = 80,  -- !
@@ -1685,7 +1379,6 @@ function test_decl.testKeyboardDrawKey(t)
             in_keyboard_keydef_list = {
                 {box = {13, 13, 5, 6}, plain_label = "a", shift_label = "A", plain_key = "a", shift_key = "A"},
             },
-            in_keyboard_caps_active = false,
             in_touch_first_time = 0,    -- !
             in_touch_first_x = 45,  -- !
             in_touch_first_y = 80,  -- !
@@ -1706,7 +1399,6 @@ function test_decl.testKeyboardDrawKey(t)
             in_keyboard_keydef_list = {
                 {box = {13, 13, 5, 6}, plain_label = "a", shift_label = "A", plain_key = "a", shift_key = "A"},
             },
-            in_keyboard_caps_active = false,
             in_touch_first_time = 0,    -- !
             in_touch_first_x = 50,  -- !
             in_touch_first_y = 80,  -- !
@@ -1727,7 +1419,6 @@ function test_decl.testKeyboardDrawKey(t)
             in_keyboard_keydef_list = {
                 {box = {13, 13, 5, 6}, plain_label = "a", shift_label = "A", plain_key = "a", shift_key = "A"},
             },
-            in_keyboard_caps_active = false,
             in_touch_first_time = 0,    -- !
             in_touch_first_x = 51,  -- !
             in_touch_first_y = 80,  -- !
@@ -1748,7 +1439,6 @@ function test_decl.testKeyboardDrawKey(t)
             in_keyboard_keydef_list = {
                 {box = {13, 13, 5, 6}, plain_label = "a", shift_label = "A", plain_key = "a", shift_key = "A"},
             },
-            in_keyboard_caps_active = false,
             in_touch_first_time = 0,    -- !
             in_touch_first_x = 47,  -- !
             in_touch_first_y = 76,  -- !
@@ -1769,7 +1459,6 @@ function test_decl.testKeyboardDrawKey(t)
             in_keyboard_keydef_list = {
                 {box = {13, 13, 5, 6}, plain_label = "a", shift_label = "A", plain_key = "a", shift_key = "A"},
             },
-            in_keyboard_caps_active = false,
             in_touch_first_time = 0,    -- !
             in_touch_first_x = 47,  -- !
             in_touch_first_y = 77,  -- !
@@ -1790,7 +1479,6 @@ function test_decl.testKeyboardDrawKey(t)
             in_keyboard_keydef_list = {
                 {box = {13, 13, 5, 6}, plain_label = "a", shift_label = "A", plain_key = "a", shift_key = "A"},
             },
-            in_keyboard_caps_active = false,
             in_touch_first_time = 0,    -- !
             in_touch_first_x = 47,  -- !
             in_touch_first_y = 83,  -- !
@@ -1811,7 +1499,6 @@ function test_decl.testKeyboardDrawKey(t)
             in_keyboard_keydef_list = {
                 {box = {13, 13, 5, 6}, plain_label = "a", shift_label = "A", plain_key = "a", shift_key = "A"},
             },
-            in_keyboard_caps_active = false,
             in_touch_first_time = 0,    -- !
             in_touch_first_x = 47,  -- !
             in_touch_first_y = 84,  -- !
@@ -1834,7 +1521,6 @@ function test_decl.testKeyboardDrawKey(t)
                 {box = {13, 13, 5, 6}, plain_label = "a", shift_label = "A", plain_key = "a", shift_key = "A"},
                 {box = {40, 19, 5, 6}, plain_label = "b", shift_label = "B", plain_key = "b", shift_key = "B"},
             },
-            in_keyboard_caps_active = false,
             in_touch_first_time = -1,
             in_touch_first_x = 0,
             in_touch_first_y = 0,
@@ -1860,7 +1546,6 @@ function test_decl.testKeyboardDrawKey(t)
                 {box = {13, 13, 5, 6}, plain_label = "a", shift_label = "A", plain_key = "a", shift_key = "A"},
                 {box = {40, 19, 5, 6}, plain_label = "b", shift_label = "B", plain_key = "b", shift_key = "B"},
             },
-            in_keyboard_caps_active = false,
             in_touch_first_time = 0,    -- !
             in_touch_first_x = 15,  -- !
             in_touch_first_y = 16,  -- !
@@ -1886,7 +1571,6 @@ function test_decl.testKeyboardDrawKey(t)
                 {box = {13, 13, 5, 6}, plain_label = "a", shift_label = "A", plain_key = "a", shift_key = "A"},
                 {box = {40, 19, 5, 6}, plain_label = "b", shift_label = "B", plain_key = "b", shift_key = "B"},
             },
-            in_keyboard_caps_active = false,
             in_touch_first_time = 0,    -- !
             in_touch_first_x = 42,  -- !
             in_touch_first_y = 22,  -- !
@@ -1912,7 +1596,6 @@ function test_decl.testKeyboardDrawKey(t)
                 {box = {13, 13, 5, 6}, plain_label = "a", shift_label = "A", plain_key = "a", shift_key = "A"},
                 {box = {40, 19, 5, 6}, plain_label = "b", shift_label = "B", plain_key = "b", shift_key = "B"},
             },
-            in_keyboard_caps_active = false,
             in_touch_first_time = 0,    -- !
             in_touch_first_x = 15,  -- !
             in_touch_first_y = 16,  -- !
@@ -1938,7 +1621,6 @@ function test_decl.testKeyboardDrawKey(t)
             in_keyboard_keydef_list = {
                 {box = {1, 1, 5, 6}, plain_label = "E", shift_label = "E", plain_key = "Escape", shift_key = "Escape"},
             },
-            in_keyboard_caps_active = false,
             in_touch_first_time = -1,
             in_touch_first_x = 0,
             in_touch_first_y = 0,
@@ -1959,7 +1641,6 @@ function test_decl.testKeyboardDrawKey(t)
             in_keyboard_keydef_list = {
                 {box = {1, 1, 5, 6}, plain_label = "E", shift_label = "E", plain_key = "Escape", shift_key = "Escape"},
             },
-            in_keyboard_caps_active = false,
             in_touch_first_time = -1,
             in_touch_first_x = 0,
             in_touch_first_y = 0,
@@ -1980,7 +1661,6 @@ function test_decl.testKeyboardDrawKey(t)
             in_keyboard_keydef_list = {
                 {box = {1, 1, 5, 6}, plain_label = "E", shift_label = "E", plain_key = "Escape", shift_key = "Escape"},
             },
-            in_keyboard_caps_active = false,
             in_touch_first_time = 0,
             in_touch_first_x = 3,
             in_touch_first_y = 4,
@@ -2004,7 +1684,6 @@ function test_decl.testKeyboardDrawKey(t)
         t.env.g_keyboard_offset_y = tc.in_keyboard_offset_y
         t.env.g_keyboard_mod = tc.in_keyboard_mod
         t.env.g_keyboard_keydef_list = tc.in_keyboard_keydef_list
-        t.env.g_keyboard_caps_active = tc.in_keyboard_caps_active
         t.env.g_touch_first_time = tc.in_touch_first_time
         t.env.g_touch_first_x = tc.in_touch_first_x
         t.env.g_touch_first_y = tc.in_touch_first_y
@@ -2184,136 +1863,6 @@ function test_decl.testKeyboardDrawMod(t)
         t.env.keyboardDrawMod()
 
         assertEqual("screen._log", tc.want_screen_log, t.env.screen._log)
-    end
-end
-
-function test_decl.testKeyboardDrawCaps(t)
-    local tt = {
-        {
-            in_keyboard_offset_x = 0,
-            in_keyboard_offset_y = 0,
-            in_keyboard_caps_active = false,
-            want_screen_log = {
-                {fn = "setColor", args = {0x06, 0x06, 0x06}},
-                {fn = "drawRectF", args = {1, 13, 11, 6}},
-                {fn = "setColor", args = {0x15, 0x15, 0x15}},
-                {fn = "drawTextBox", args = {1, 13, 11, 6, "CL", 0, 0}},
-            },
-        },
-        {
-            in_keyboard_offset_x = 32,  -- !
-            in_keyboard_offset_y = 64,  -- !
-            in_keyboard_caps_active = false,
-            want_screen_log = {
-                {fn = "setColor", args = {0x06, 0x06, 0x06}},
-                {fn = "drawRectF", args = {33, 77, 11, 6}},
-                {fn = "setColor", args = {0x15, 0x15, 0x15}},
-                {fn = "drawTextBox", args = {33, 77, 11, 6, "CL", 0, 0}},
-            },
-        },
-        {
-            in_keyboard_offset_x = 0,
-            in_keyboard_offset_y = 0,
-            in_keyboard_caps_active = true, -- !
-            want_screen_log = {
-                {fn = "setColor", args = {0xFF, 0xFF, 0xFF}},
-                {fn = "drawRectF", args = {1, 13, 11, 6}},
-                {fn = "setColor", args = {0x06, 0x06, 0x06}},
-                {fn = "drawTextBox", args = {1, 13, 11, 6, "CL", 0, 0}},
-            },
-        },
-    }
-
-    for _, tc in ipairs(tt) do
-        t:reset()
-        t.fn()
-
-        t.env.g_keyboard_offset_x = tc.in_keyboard_offset_x
-        t.env.g_keyboard_offset_y = tc.in_keyboard_offset_y
-        t.env.g_keyboard_caps_active = tc.in_keyboard_caps_active
-        t.env.keyboardDrawCaps()
-
-        assertEqual("screen._log", tc.want_screen_log, t.env.screen._log)
-    end
-end
-
-function test_decl.testKeyboardShift(t)
-    local tt = {
-        {
-            in_keyboard_mod = 0x00,
-            in_keyboard_caps_active = false,
-            in_keydef = {
-                plain_key = "a",
-            },
-            want_shift = false,
-        },
-        {
-            in_keyboard_mod = 0x01, -- !
-            in_keyboard_caps_active = false,
-            in_keydef = {
-                plain_key = "a",
-            },
-            want_shift = true,
-        },
-        {
-            in_keyboard_mod = 0x00,
-            in_keyboard_caps_active = true, -- !
-            in_keydef = {
-                plain_key = "a",
-            },
-            want_shift = true,
-        },
-        {
-            in_keyboard_mod = 0x01, -- !
-            in_keyboard_caps_active = true, -- !
-            in_keydef = {
-                plain_key = "a",
-            },
-            want_shift = false,
-        },
-        {
-            in_keyboard_mod = 0x00,
-            in_keyboard_caps_active = true, -- !
-            in_keydef = {
-                plain_key = "z",    -- !
-            },
-            want_shift = true,
-        },
-        {
-            in_keyboard_mod = 0x00,
-            in_keyboard_caps_active = true, -- !
-            in_keydef = {
-                plain_key = "`",    -- !
-            },
-            want_shift = false,
-        },
-        {
-            in_keyboard_mod = 0x00,
-            in_keyboard_caps_active = true, -- !
-            in_keydef = {
-                plain_key = "{",    -- !
-            },
-            want_shift = false,
-        },
-        {
-            in_keyboard_mod = 0x00,
-            in_keyboard_caps_active = true, -- !
-            in_keydef = {
-                plain_key = "aa",   -- !
-            },
-            want_shift = false,
-        },
-    }
-
-    for _, tc in ipairs(tt) do
-        t:reset()
-        t.fn()
-
-        t.env.g_keyboard_mod = tc.in_keyboard_mod
-        t.env.g_keyboard_caps_active = tc.in_keyboard_caps_active
-        local got_shift = t.env.keyboardShift(tc.in_keydef)
-
-        assertEqual("shift", tc.want_shift, got_shift)
     end
 end
 
