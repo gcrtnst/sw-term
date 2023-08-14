@@ -190,12 +190,6 @@ function keyboardTickCaps()
 end
 
 function keyboardDraw()
-    local w = screen.getWidth()
-    local h = screen.getHeight()
-    if w ~= g_touch_w or h ~= g_touch_h then
-        return
-    end
-
     keyboardDrawKey()
     keyboardDrawMod()
     keyboardDrawCaps()

@@ -1325,46 +1325,6 @@ function test_decl.testKeyboardTickCaps(t)
     end
 end
 
-function test_decl.testKeyboardDraw(t)
-    local tt = {
-        {
-            in_screen_w = 96,
-            in_screen_h = 32,
-            in_touch_w = 96,
-            in_touch_h = 32,
-            want_draw = true,
-        },
-        {
-            in_screen_w = 97,   -- !
-            in_screen_h = 32,
-            in_touch_w = 96,
-            in_touch_h = 32,
-            want_draw = false,
-        },
-        {
-            in_screen_w = 96,
-            in_screen_h = 33,   -- !
-            in_touch_w = 96,
-            in_touch_h = 32,
-            want_draw = false,
-        },
-    }
-
-    for _, tc in ipairs(tt) do
-        t:reset()
-        t.fn()
-
-        t.env.screen._w = tc.in_screen_w
-        t.env.screen._h = tc.in_screen_h
-        t.env.g_touch_w = tc.in_touch_w
-        t.env.g_touch_h = tc.in_touch_h
-        t.env.keyboardDraw()
-
-        local got_draw = #t.env.screen._log > 0
-        assertEqual("draw", tc.want_draw, got_draw)
-    end
-end
-
 function test_decl.testKeyboardDrawKey(t)
     local tt = {
         {
@@ -2896,18 +2856,8 @@ end
 
 local function buildMockScreen()
     local screen = {
-        _w = 96,
-        _h = 32,
         _log = {},
     }
-
-    function screen.getWidth()
-        return screen._w
-    end
-
-    function screen.getHeight()
-        return screen._h
-    end
 
     function screen.setColor(...)
         table.insert(screen._log, {
