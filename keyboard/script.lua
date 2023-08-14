@@ -27,7 +27,7 @@ g_touch_second_y = 0
 function init()
     g_keyboard_keydef_list = {
         keyboardNewControl({1, 1, 5, 6}, "E", "Escape"),
-        keyboardNewGraphic({7, 1, 5, 6}, "`", "~"),
+        keyboardNewGraphic({7, 1, 5, 6}, "\x60", "~"),
         keyboardNewGraphic({13, 1, 5, 6}, "1", "!"),
         keyboardNewGraphic({19, 1, 5, 6}, "2", "@"),
         keyboardNewGraphic({25, 1, 5, 6}, "3", "#"),
