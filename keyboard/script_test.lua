@@ -602,6 +602,25 @@ function test_decl.testKeyboardTickKey(t)
                 {52149, "/keyboard?key=b&mod=0"},
             },
         },
+
+        {
+            in_keyboard_offset_x = 0,
+            in_keyboard_offset_y = 0,
+            in_keyboard_mod = 0x00,
+            in_keyboard_keydef_list = {
+                {box = {7, 1, 5, 6}, plain_key = "`", shift_key = "~"},
+            },
+            in_http_cnt = 0,
+            in_touch_first_time = 0,
+            in_touch_first_x = 9,
+            in_touch_first_y = 4,
+            in_touch_second_time = -1,
+            in_touch_second_x = 0,
+            in_touch_second_y = 0,
+            want_async_log = {
+                {52149, "/keyboard?key=%60&mod=0"},
+            },
+        },
     }
 
     for _, tc in ipairs(tt) do
@@ -2371,6 +2390,24 @@ function test_decl.testTouchBox(t)
         local got_time = t.env.touchBox(tc.in_box)
 
         assertEqual("time", tc.want_time, got_time)
+    end
+end
+
+function test_decl.testEscapeQuery(t)
+    local tt = {
+        {in_s = "", want_s = ""},
+        {in_s = "abc", want_s = "abc"},
+        {in_s = "one two", want_s = "one+two"},
+        {in_s = "10%", want_s = "10%25"},
+        {in_s = " ?&=#+%!<>#\"{}|\\^[]`☺\t:/@$'()*,;", want_s = "+%3F%26%3D%23%2B%25%21%3C%3E%23%22%7B%7D%7C%5C%5E%5B%5D%60%E2%98%BA%09%3A%2F%40%24%27%28%29%2A%2C%3B"},
+    }
+
+    for _, tc in ipairs(tt) do
+        t:reset()
+        t.fn()
+
+        local got_s = t.env.escapeQuery(tc.in_s)
+        assertEqual("s", tc.want_s, got_s)
     end
 end
 

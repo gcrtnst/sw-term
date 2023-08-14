@@ -154,7 +154,7 @@ function keyboardTickKey()
         local box = boxOffset(keydef.box, g_keyboard_offset_x, g_keyboard_offset_y)
         local shift = g_keyboard_mod&c_keyboard_mod_shift ~= 0x00
         local key = shift and keydef.shift_key or keydef.plain_key
-        local url = string.format("/keyboard?key=%s&mod=%d", key, g_keyboard_mod)
+        local url = string.format("/keyboard?key=%s&mod=%d", escapeQuery(key), g_keyboard_mod)
 
         local time = touchBox(box)
         if time == 0 then
@@ -305,6 +305,20 @@ end
 function drawTextBox(box, text, h_align, v_align)
     local x, y, w, h = table.unpack(box)
     screen.drawTextBox(x, y, w, h, text, h_align, v_align)
+end
+
+function escapeQuery(s)
+    local t = {}
+    for i = 1, #s do
+        local c = string.sub(s, i, i)
+        if c == " " then
+            c = "+"
+        elseif string.match(c, "^[%-%.0-9A-Z_a-z~]$") == nil then
+            c = string.format("%%%02X", string.byte(c, 1))
+        end
+        table.insert(t, c)
+    end
+    return table.concat(t)
 end
 
 init()
