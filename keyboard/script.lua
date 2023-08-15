@@ -88,10 +88,10 @@ function init()
     g_keyboard_moddef_list = {
         keyboardNewModifier({1, 19, 14, 6}, "S", 0x01),
         keyboardNewModifier({82, 19, 13, 6}, "S", 0x01),
-        keyboardNewModifier({7, 25, 7, 6}, "C", 0x02),
-        keyboardNewModifier({62, 25, 7, 6}, "C", 0x02),
-        keyboardNewModifier({15, 25, 7, 6}, "A", 0x04),
-        keyboardNewModifier({54, 25, 7, 6}, "A", 0x04),
+        keyboardNewModifier({7, 25, 7, 6}, "C", 0x04),
+        keyboardNewModifier({15, 25, 7, 6}, "A", 0x02),
+        keyboardNewModifier({54, 25, 7, 6}, "A", 0x02),
+        keyboardNewModifier({62, 25, 7, 6}, "C", 0x04),
     }
 end
 
