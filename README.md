@@ -17,8 +17,8 @@ sw-term は以下のマイコンで構成されています。
 |種類|ラベル|用途|
 |:---|:---|:---|
 |number|HTTP Port|sw-term-server のリッスンポートを指定してください|
-|number|Offset X|画面描画の X 座標を指定された分だけずらします|
-|number|Offset Y|画面描画の Y 座標を指定された分だけずらします|
+|number|Offset X|画面表示の X 座標を指定された分だけずらします|
+|number|Offset Y|画面表示の Y 座標を指定された分だけずらします|
 
 ロジック入出力：
 |in/out|種類|チャンネル|用途|
