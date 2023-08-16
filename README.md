@@ -9,7 +9,7 @@ sw-term は以下のマイコンで構成されています。
 
 各マイコンの Lua スクリプトは、本リポジトリの対応するフォルダに `script.lua` として格納されています。ただし、screen と keyboard のスクリプトは4096文字制限を超えているため、[Pony IDE](https://lua.flaffipony.rocks/) などで minify する必要があります。
 
-これらのマイコンは、サーバーアプリケーション [sw-term-server](https://github.com/gcrtnst/sw-term-server) と通信します。PTY の管理、ターミナルシーケンスの解析、シェルアプリケーションの起動等はサーバー側で行われます。サーバー側の詳細は [sw-term-server](https://github.com/gcrtnst/sw-term-server) のリポジトリを参照ください。
+これらのマイコンは、サーバーアプリケーション sw-term-server と通信します。PTY の管理、ターミナルシーケンスの解析、シェルアプリケーションの起動等はサーバー側で行われます。サーバー側の詳細は [sw-term-server](https://github.com/gcrtnst/sw-term-server) のリポジトリを参照ください。
 
 ## 各 Lua スクリプトの仕様
 ### screen
