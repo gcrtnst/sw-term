@@ -1,6 +1,10 @@
 # sw-term
 sw-term は Stormworks 上で動作するターミナルエミュレータです。
 
+## Steam Workshop
+本作品を実際に Stormworks 上で使用するには、Steam Workshop で公開しているこちらの作品を参照ください。\
+https://steamcommunity.com/sharedfiles/filedetails/?id=3020958048
+
 ## システム構成
 sw-term は以下のマイコンで構成されています。
 - screen：端末の画面をモニタ部品に表示します。
