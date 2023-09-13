@@ -274,16 +274,16 @@ function touchBox(box)
     local time = -1
     if g_touch_first_time > time and
         box_x <= g_touch_first_x and
-        g_touch_first_x <= box_x + box_w and
+        g_touch_first_x < box_x + box_w and
         box_y <= g_touch_first_y and
-        g_touch_first_y <= box_y + box_h then
+        g_touch_first_y < box_y + box_h then
         time = g_touch_first_time
     end
     if g_touch_second_time > time and
         box_x <= g_touch_second_x and
-        g_touch_second_x <= box_x + box_w and
+        g_touch_second_x < box_x + box_w and
         box_y <= g_touch_second_y and
-        g_touch_second_y <= box_y + box_h then
+        g_touch_second_y < box_y + box_h then
         time = g_touch_second_time
     end
     return time

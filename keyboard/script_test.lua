@@ -159,7 +159,7 @@ function test_decl.testKeyboardTickKey(t)
             },
             in_http_cnt = 0,
             in_touch_first_time = 0,    -- !
-            in_touch_first_x = 18,  -- !
+            in_touch_first_x = 17,  -- !
             in_touch_first_y = 16,  -- !
             in_touch_second_time = -1,
             in_touch_second_x = 0,
@@ -177,7 +177,7 @@ function test_decl.testKeyboardTickKey(t)
             },
             in_http_cnt = 0,
             in_touch_first_time = 0,    -- !
-            in_touch_first_x = 19,  -- !
+            in_touch_first_x = 18,  -- !
             in_touch_first_y = 16,  -- !
             in_touch_second_time = -1,
             in_touch_second_x = 0,
@@ -228,7 +228,7 @@ function test_decl.testKeyboardTickKey(t)
             in_http_cnt = 0,
             in_touch_first_time = 0,    -- !
             in_touch_first_x = 15,  -- !
-            in_touch_first_y = 19,  -- !
+            in_touch_first_y = 18,  -- !
             in_touch_second_time = -1,
             in_touch_second_x = 0,
             in_touch_second_y = 0,
@@ -246,7 +246,7 @@ function test_decl.testKeyboardTickKey(t)
             in_http_cnt = 0,
             in_touch_first_time = 0,    -- !
             in_touch_first_x = 15,  -- !
-            in_touch_first_y = 20,  -- !
+            in_touch_first_y = 19,  -- !
             in_touch_second_time = -1,
             in_touch_second_x = 0,
             in_touch_second_y = 0,
@@ -313,7 +313,7 @@ function test_decl.testKeyboardTickKey(t)
             },
             in_http_cnt = 0,
             in_touch_first_time = 0,    -- !
-            in_touch_first_x = 50,  -- !
+            in_touch_first_x = 49,  -- !
             in_touch_first_y = 80,  -- !
             in_touch_second_time = -1,
             in_touch_second_x = 0,
@@ -331,7 +331,7 @@ function test_decl.testKeyboardTickKey(t)
             },
             in_http_cnt = 0,
             in_touch_first_time = 0,    -- !
-            in_touch_first_x = 51,  -- !
+            in_touch_first_x = 50,  -- !
             in_touch_first_y = 80,  -- !
             in_touch_second_time = -1,
             in_touch_second_x = 0,
@@ -382,7 +382,7 @@ function test_decl.testKeyboardTickKey(t)
             in_http_cnt = 0,
             in_touch_first_time = 0,    -- !
             in_touch_first_x = 47,  -- !
-            in_touch_first_y = 83,  -- !
+            in_touch_first_y = 82,  -- !
             in_touch_second_time = -1,
             in_touch_second_x = 0,
             in_touch_second_y = 0,
@@ -400,7 +400,7 @@ function test_decl.testKeyboardTickKey(t)
             in_http_cnt = 0,
             in_touch_first_time = 0,    -- !
             in_touch_first_x = 47,  -- !
-            in_touch_first_y = 84,  -- !
+            in_touch_first_y = 83,  -- !
             in_touch_second_time = -1,
             in_touch_second_x = 0,
             in_touch_second_y = 0,
@@ -737,7 +737,7 @@ function test_decl.testKeyboardTickMod(t)
                 {box = {1, 19, 14, 6}, mod = 0x01, label = "S"},
             },
             in_touch_first_time = 0,    -- !
-            in_touch_first_x = 15,  -- !
+            in_touch_first_x = 14,  -- !
             in_touch_first_y = 22,  -- !
             in_touch_second_time = -1,
             in_touch_second_x = 0,
@@ -751,7 +751,7 @@ function test_decl.testKeyboardTickMod(t)
                 {box = {1, 19, 14, 6}, mod = 0x01, label = "S"},
             },
             in_touch_first_time = 0,    -- !
-            in_touch_first_x = 16,  -- !
+            in_touch_first_x = 15,  -- !
             in_touch_first_y = 22,  -- !
             in_touch_second_time = -1,
             in_touch_second_x = 0,
@@ -794,7 +794,7 @@ function test_decl.testKeyboardTickMod(t)
             },
             in_touch_first_time = 0,    -- !
             in_touch_first_x = 8,   -- !
-            in_touch_first_y = 25,  -- !
+            in_touch_first_y = 24,  -- !
             in_touch_second_time = -1,
             in_touch_second_x = 0,
             in_touch_second_y = 0,
@@ -808,7 +808,7 @@ function test_decl.testKeyboardTickMod(t)
             },
             in_touch_first_time = 0,    -- !
             in_touch_first_x = 8,   -- !
-            in_touch_first_y = 26,  -- !
+            in_touch_first_y = 25,  -- !
             in_touch_second_time = -1,
             in_touch_second_x = 0,
             in_touch_second_y = 0,
@@ -863,7 +863,7 @@ function test_decl.testKeyboardTickMod(t)
                 {box = {1, 19, 14, 6}, mod = 0x01, label = "S"},
             },
             in_touch_first_time = 0,    -- !
-            in_touch_first_x = 47,  -- !
+            in_touch_first_x = 46,  -- !
             in_touch_first_y = 86,  -- !
             in_touch_second_time = -1,
             in_touch_second_x = 0,
@@ -877,7 +877,7 @@ function test_decl.testKeyboardTickMod(t)
                 {box = {1, 19, 14, 6}, mod = 0x01, label = "S"},
             },
             in_touch_first_time = 0,    -- !
-            in_touch_first_x = 48,  -- !
+            in_touch_first_x = 47,  -- !
             in_touch_first_y = 86,  -- !
             in_touch_second_time = -1,
             in_touch_second_x = 0,
@@ -920,7 +920,7 @@ function test_decl.testKeyboardTickMod(t)
             },
             in_touch_first_time = 0,    -- !
             in_touch_first_x = 40,  -- !
-            in_touch_first_y = 89,  -- !
+            in_touch_first_y = 88,  -- !
             in_touch_second_time = -1,
             in_touch_second_x = 0,
             in_touch_second_y = 0,
@@ -934,7 +934,7 @@ function test_decl.testKeyboardTickMod(t)
             },
             in_touch_first_time = 0,    -- !
             in_touch_first_x = 40,  -- !
-            in_touch_first_y = 90,  -- !
+            in_touch_first_y = 89,  -- !
             in_touch_second_time = -1,
             in_touch_second_x = 0,
             in_touch_second_y = 0,
@@ -1239,7 +1239,7 @@ function test_decl.testKeyboardDrawKey(t)
                 {box = {13, 13, 5, 6}, plain_label = "a", shift_label = "A", plain_key = "a", shift_key = "A"},
             },
             in_touch_first_time = 0,    -- !
-            in_touch_first_x = 18,  -- !
+            in_touch_first_x = 17,  -- !
             in_touch_first_y = 16,  -- !
             in_touch_second_time = -1,
             in_touch_second_x = 0,
@@ -1259,7 +1259,7 @@ function test_decl.testKeyboardDrawKey(t)
                 {box = {13, 13, 5, 6}, plain_label = "a", shift_label = "A", plain_key = "a", shift_key = "A"},
             },
             in_touch_first_time = 0,    -- !
-            in_touch_first_x = 19,  -- !
+            in_touch_first_x = 18,  -- !
             in_touch_first_y = 16,  -- !
             in_touch_second_time = -1,
             in_touch_second_x = 0,
@@ -1320,7 +1320,7 @@ function test_decl.testKeyboardDrawKey(t)
             },
             in_touch_first_time = 0,    -- !
             in_touch_first_x = 15,  -- !
-            in_touch_first_y = 19,  -- !
+            in_touch_first_y = 18,  -- !
             in_touch_second_time = -1,
             in_touch_second_x = 0,
             in_touch_second_y = 0,
@@ -1340,7 +1340,7 @@ function test_decl.testKeyboardDrawKey(t)
             },
             in_touch_first_time = 0,    -- !
             in_touch_first_x = 15,  -- !
-            in_touch_first_y = 20,  -- !
+            in_touch_first_y = 19,  -- !
             in_touch_second_time = -1,
             in_touch_second_x = 0,
             in_touch_second_y = 0,
@@ -1419,7 +1419,7 @@ function test_decl.testKeyboardDrawKey(t)
                 {box = {13, 13, 5, 6}, plain_label = "a", shift_label = "A", plain_key = "a", shift_key = "A"},
             },
             in_touch_first_time = 0,    -- !
-            in_touch_first_x = 50,  -- !
+            in_touch_first_x = 49,  -- !
             in_touch_first_y = 80,  -- !
             in_touch_second_time = -1,
             in_touch_second_x = 0,
@@ -1439,7 +1439,7 @@ function test_decl.testKeyboardDrawKey(t)
                 {box = {13, 13, 5, 6}, plain_label = "a", shift_label = "A", plain_key = "a", shift_key = "A"},
             },
             in_touch_first_time = 0,    -- !
-            in_touch_first_x = 51,  -- !
+            in_touch_first_x = 50,  -- !
             in_touch_first_y = 80,  -- !
             in_touch_second_time = -1,
             in_touch_second_x = 0,
@@ -1500,7 +1500,7 @@ function test_decl.testKeyboardDrawKey(t)
             },
             in_touch_first_time = 0,    -- !
             in_touch_first_x = 47,  -- !
-            in_touch_first_y = 83,  -- !
+            in_touch_first_y = 82,  -- !
             in_touch_second_time = -1,
             in_touch_second_x = 0,
             in_touch_second_y = 0,
@@ -1520,7 +1520,7 @@ function test_decl.testKeyboardDrawKey(t)
             },
             in_touch_first_time = 0,    -- !
             in_touch_first_x = 47,  -- !
-            in_touch_first_y = 84,  -- !
+            in_touch_first_y = 83,  -- !
             in_touch_second_time = -1,
             in_touch_second_x = 0,
             in_touch_second_y = 0,
@@ -2195,7 +2195,7 @@ function test_decl.testTouchBox(t)
         },
         {
             in_touch_first_time = 0,    -- !
-            in_touch_first_x = 71,  -- !
+            in_touch_first_x = 70,  -- !
             in_touch_first_y = 17,
             in_touch_second_time = -1,
             in_touch_second_x = 47,
@@ -2205,7 +2205,7 @@ function test_decl.testTouchBox(t)
         },
         {
             in_touch_first_time = 0,    -- !
-            in_touch_first_x = 72,  -- !
+            in_touch_first_x = 71,  -- !
             in_touch_first_y = 17,
             in_touch_second_time = -1,
             in_touch_second_x = 47,
@@ -2236,7 +2236,7 @@ function test_decl.testTouchBox(t)
         {
             in_touch_first_time = 0,    -- !
             in_touch_first_x = 47,
-            in_touch_first_y = 23,  -- !
+            in_touch_first_y = 22,  -- !
             in_touch_second_time = -1,
             in_touch_second_x = 47,
             in_touch_second_y = 17,
@@ -2246,7 +2246,7 @@ function test_decl.testTouchBox(t)
         {
             in_touch_first_time = 0,    -- !
             in_touch_first_x = 47,
-            in_touch_first_y = 24,  -- !
+            in_touch_first_y = 23,  -- !
             in_touch_second_time = -1,
             in_touch_second_x = 47,
             in_touch_second_y = 17,
@@ -2299,7 +2299,7 @@ function test_decl.testTouchBox(t)
             in_touch_first_x = 47,
             in_touch_first_y = 17,
             in_touch_second_time = 0,   -- !
-            in_touch_second_x = 71, -- !
+            in_touch_second_x = 70, -- !
             in_touch_second_y = 17,
             in_box = {23, 7, 48, 16},
             want_time = 0,
@@ -2309,7 +2309,7 @@ function test_decl.testTouchBox(t)
             in_touch_first_x = 47,
             in_touch_first_y = 17,
             in_touch_second_time = 0,   -- !
-            in_touch_second_x = 72, -- !
+            in_touch_second_x = 71, -- !
             in_touch_second_y = 17,
             in_box = {23, 7, 48, 16},
             want_time = -1,
@@ -2340,7 +2340,7 @@ function test_decl.testTouchBox(t)
             in_touch_first_y = 17,
             in_touch_second_time = 0,   -- !
             in_touch_second_x = 47,
-            in_touch_second_y = 23, -- !
+            in_touch_second_y = 22, -- !
             in_box = {23, 7, 48, 16},
             want_time = 0,
         },
@@ -2350,7 +2350,7 @@ function test_decl.testTouchBox(t)
             in_touch_first_y = 17,
             in_touch_second_time = 0,   -- !
             in_touch_second_x = 47,
-            in_touch_second_y = 24, -- !
+            in_touch_second_y = 23, -- !
             in_box = {23, 7, 48, 16},
             want_time = -1,
         },
